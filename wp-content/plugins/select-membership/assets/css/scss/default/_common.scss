@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Qode Membership Plugin Style - begin
+   ========================================================================== */
+
+.qode-social-login-holder input[type="text"],
+.qode-social-login-holder input[type="email"],
+.qode-social-login-holder input[type="password"],
+.qode-social-register-holder input[type="text"],
+.qode-social-register-holder input[type="email"],
+.qode-social-register-holder input[type="password"],
+.qode-social-reset-password-holder input[type="text"],
+.qode-social-reset-password-holder input[type="email"],
+.qode-social-reset-password-holder input[type="password"],
+.qode-membership-input-holder .qode-membership-input {
+    background-color: #fff;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    color: #000;
+	font-size: 12px;
+    font-family: inherit;
+    line-height: 18px;
+    outline: 0 none;
+    padding: 12px 15px;
+	margin-bottom: 20px;
+    resize: none;
+    width: 100%;
+
+	&::-webkit-input-placeholder{
+		color: #000;
+	}
+	&::-moz-placeholder{
+		color: #000;
+	}
+	&:-ms-input-placeholder{
+		color: #000;
+	}
+}
+
+.qode-membership-input-holder label{
+    display: block;
+    margin: 0 0 5px;
+}
+
+.qode-membership-response-holder{
+	.qode-membership-response {
+		display: block;
+		margin: 14px 0 0;
+		font-size: 13px;
+		font-weight: 700;
+
+		&.qode-membership-message-succes {
+			color: #000;
+		}
+
+		&.qode-membership-message-error {
+			color: #ff3d27;
+		}
+	}
+}
+
+.qode-wp-register-holder{
+	.qode-register-notice h5 {
+		margin: 0;
+	}
+}
+
+
+/* ==========================================================================
+   Qode Membership Plugin Style - end
+   ========================================================================== */

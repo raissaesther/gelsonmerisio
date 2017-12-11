@@ -1,0 +1,201 @@
+.qode-rf-holder {
+	input[type=text],
+	select {
+		border: none;
+		outline: none;
+		background-color: transparent;
+	}
+	.qode-rf-row {
+		display: table;
+		width: 100%;
+	}
+	.qode-rf-col-holder {
+		display: table-cell;
+		vertical-align: middle;
+
+		&:nth-child(1) {
+			width: 21.8%;
+		}
+		&:nth-child(2),
+		&:nth-child(3) {
+			width: 30%;
+		}
+		&:nth-child(4) {
+			width: 18.2%;
+			padding-left: 20px;
+			box-sizing: border-box;
+		}
+		.qode-rf-options-holder {
+			display: table;
+
+			.qode-rf-field-holder {
+				display: table-cell;
+				width: 100%;
+			}
+			.qode-rf-label {
+				display: table-cell;
+				padding: 0 15px 0 33px;
+			}
+		}
+	}
+
+	.qode-rf-field-holder {
+		background-color: #fff;
+		position: relative;
+
+		select,
+		input[type=text] {
+			padding-left: 15px;
+			padding-right: 45px;
+			display: block;
+			width: 100%;
+			font-family: inherit;
+			color: #a4a4a4;
+			font-size: 18px;
+			border: 2px solid #bec1c4;
+			background-color: #f8f8f8;
+			margin: 0;
+			height: 55px;
+
+			@include qodeBorderRadius(0);
+			@include qodeBoxSizing(border-box);
+
+		}
+
+		input[type=text] {
+			padding-top: 11px;
+			padding-bottom: 11px;
+
+			&::-webkit-input-placeholder {
+				color: #a4a4a4;
+			}
+
+			&:-moz-placeholder {
+				color: #a4a4a4;
+				opacity: 1;
+			}
+
+			&::-moz-placeholder {
+				color: #a4a4a4;
+				opacity: 1;
+			}
+		}
+
+		select {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			text-indent: 1px;
+			text-overflow: '';
+			cursor: pointer;
+
+			&::-ms-expand {
+				display: none;
+			}
+		}
+
+		.qode-rf-icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding-right: 20px;
+			line-height: 55px;
+			height: 100%;
+			text-align: center;
+
+			span {
+				color: #000000;
+				line-height: inherit;
+			}
+		}
+
+		@include qodeBoxSizing(border-box);
+	}
+
+	.qode-btn {
+		display: block;
+		width: 100%;
+		font-size: 15px;
+
+		&.qode-btn-icon .qode-btn-icon-holder,
+		.qode-btn-text {
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+	}
+
+	.qode-rf-label {
+		line-height: 55px;
+		text-transform: uppercase;
+	}
+}
+
+/* ==========================================================================
+   #jQuery Datepicker styles - start
+   ========================================================================== */
+#ui-datepicker-div {
+    z-index: 1000 !important;
+    background-color: #fff;
+    min-width: 220px;
+
+    @include qodeBoxShadow(0 0 2px #ddd);
+    font-size: 12px;
+
+    table tr {
+        border: none;
+    }
+
+    table {
+        padding: 0 4px 4px;
+    }
+
+    table td {
+        padding: 3px;
+        line-height: 1.5em;
+    }
+	.ui-datepicker-calendar {
+		width: 100%;
+	}
+    .ui-datepicker-header {
+        padding: 5px 16px;
+        position: relative;
+    }
+
+    .ui-datepicker-next,
+    .ui-datepicker-prev {
+        position: absolute;
+        font-size: 14px;
+    }
+
+    .ui-datepicker-prev {
+        left: 12px;
+    }
+
+    .ui-datepicker-next {
+        right: 12px;
+    }
+
+    .ui-datepicker-title {
+        text-align: center;
+    }
+
+    .ui-datepicker-today {
+        color: #111;
+        background-color: $first-main-color;
+
+        a {
+            color: #111;
+        }
+    }
+
+    .ui-datepicker-current-day:not(.ui-datepicker-today){
+        a{
+            color: $first-main-color;
+        }
+    }
+}
+
+/* ==========================================================================
+   #jQuery Datepicker styles - end
+   ========================================================================== */

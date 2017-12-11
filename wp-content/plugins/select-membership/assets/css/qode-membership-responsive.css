@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* ==========================================================================
+   Shortcodes responsive styles
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qode-membership-dashboard-nav-holder {
+    width: 100%;
+    float: none;
+  }
+  .qode-membership-dashboard-content-holder {
+    width: 100%;
+    float: none;
+  }
+}
+
+/*# sourceMappingURL=../../../select-membership/assets/css/qode-membership-responsive.css.map */

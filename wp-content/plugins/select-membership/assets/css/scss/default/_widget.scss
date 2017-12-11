@@ -1,0 +1,274 @@
+/* Login/Register widget - start
+   ========================================================================== */
+
+/* User not logged in */
+.qode-login-register-widget {
+    &.qode-user-not-logged-in {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        .qode-menu-area & {
+            height: 100%;
+        }
+
+        .qode-sidebar & {
+            width: 100%;
+        }
+
+        .qode-login-opener {
+            &:before {
+                position: relative;
+                display: inline-block;
+                top: -1px;
+                font-family: 'ElegantIcons';
+                content: "\e08a";
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+
+            /* Top bar */
+            .header_top & {
+                color: #fff;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            /* Menu area */
+            .header_bottom & {
+                color: #696969;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 12px;
+                letter-spacing: 2px;
+                margin: 0 10px;
+                position: relative;
+                @include qodeTransition(color 0.3s ease);
+
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            .dark:not(.sticky):not(.scrolled) .header_bottom & {
+                color: #000 !important;
+                &:hover {
+                    color: rgba(0, 0, 0, .8);
+                }
+            }
+
+            .light:not(.sticky):not(.scrolled) .header_bottom & {
+                color: #fff !important;
+                &:hover {
+                    color: rgba(255, 255, 255, .8);
+                }
+            }
+        }
+    }
+}
+
+/* User logged in */
+
+.qode-login-register-widget {
+    &.qode-user-logged-in {
+        position: relative;
+        display: inline-table;
+        vertical-align: middle;
+        height: 100%;
+
+        .qode-logged-in-user {
+            .qode-logged-in-user-inner{
+                & > span {
+                    img {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 28px;
+                        height: 28px;
+                        margin: 0 5px 0 0;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+
+        /* Top bar and menu area dropdown position */
+        .header_top &,
+        .header_bottom & {
+            .qode-login-dropdown {
+                position: absolute;
+                top: 100%;
+                margin: 0;
+                left: 0;
+                opacity: 0;
+                list-style-type: none;
+                text-align: left;
+                padding: 0;
+                width: 193px;
+                box-sizing: border-box;
+                visibility: hidden;
+                z-index: 100;
+                @include qodeTransition(opacity 0.3s ease);
+
+                li {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1em;
+
+                    a {
+                        display: block;
+                        position: relative;
+                        @include qodeTransition(color 0.3s ease);
+                    }
+                }
+            }
+
+            &:hover .qode-login-dropdown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Menu area style */
+        .header_bottom & {
+            cursor: pointer;
+            /* User part */
+            .qode-logged-in-user {
+                height: 100%;
+                display: table;
+                vertical-align: middle;
+
+                .qode-logged-in-user-inner {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 100%;
+                    & > span {
+                        color: #696969;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 12px;
+                        letter-spacing: 2px;
+                        margin: 0 10px;
+                        text-transform: uppercase;
+
+                        .qode_icon_font_elegant{
+                            top: 2px;
+                            position: relative;
+                            left: -4px;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .qode-logged-in-user {
+                    .qode-logged-in-user-inner {
+                        & > span {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            /* Dropdown part */
+            .qode-login-dropdown {
+                border-top: 5px solid $first-main-color;
+                background-color: #fff;
+                padding: 14px 0 22px;
+
+                li {
+                    a {
+                        border-bottom: 1px solid transparent;
+                        color: #a6a6a6;
+                        display: block;
+                        font-size: 12px;
+                        font-weight: 500;
+                        height: auto;
+                        line-height: 34px;
+                        margin: 0 24px;
+                        padding: 0 4px;
+                        @include qodeTransition(color 0.3s ease);
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                    &:last-child a{
+                        border: 0;
+                    }
+                }
+            }
+
+            &:hover .qode-login-dropdown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .dark:not(.sticky):not(.scrolled) .header_bottom & {
+            .qode-logged-in-user {
+                .qode-logged-in-user-inner {
+                    & > span span,
+                    & > span i {
+                        color: #000 !important;
+                        &:hover {
+                            color: rgba(0, 0, 0, .8);
+                        }
+                    }
+                }
+            }
+        }
+
+        .light:not(.sticky):not(.scrolled) .header_bottom & {
+            .qode-logged-in-user {
+                .qode-logged-in-user-inner {
+                    & > span span,
+                    & > span i {
+                        color: #fff !important;
+                        &:hover {
+                            color: rgba(#fff, .8);
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Top bar style */
+        .header_top & {
+            cursor: pointer;
+            /* User part */
+            .qode-logged-in-user {
+                .qode-logged-in-user-inner {
+                    & > span {
+                        color: #fff;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            /* Dropdown part */
+            .qode-login-dropdown {
+                background-color: #212121;
+                padding: 15px 0;
+                li {
+                    a {
+                        color: #fff;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        padding: 8px 20px;
+                        &:hover {
+                            color: rgba(255, 255, 255, .8);
+                        }
+                    }
+                }
+            }
+
+            &:hover .qode-login-dropdown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Login/Register widget - end
+   ========================================================================== */

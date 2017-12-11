@@ -1,0 +1,630 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* ==========================================================================
+   Shortcodes styles
+   ========================================================================== */
+/* ==========================================================================
+   Qode Membership Plugin Style - begin
+   ========================================================================== */
+.qode-social-login-holder input[type="text"],
+.qode-social-login-holder input[type="email"],
+.qode-social-login-holder input[type="password"],
+.qode-social-register-holder input[type="text"],
+.qode-social-register-holder input[type="email"],
+.qode-social-register-holder input[type="password"],
+.qode-social-reset-password-holder input[type="text"],
+.qode-social-reset-password-holder input[type="email"],
+.qode-social-reset-password-holder input[type="password"],
+.qode-membership-input-holder .qode-membership-input {
+  background-color: #fff;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 12px;
+  font-family: inherit;
+  line-height: 18px;
+  outline: 0 none;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  resize: none;
+  width: 100%;
+}
+
+.qode-social-login-holder input[type="text"]::-webkit-input-placeholder,
+.qode-social-login-holder input[type="email"]::-webkit-input-placeholder,
+.qode-social-login-holder input[type="password"]::-webkit-input-placeholder,
+.qode-social-register-holder input[type="text"]::-webkit-input-placeholder,
+.qode-social-register-holder input[type="email"]::-webkit-input-placeholder,
+.qode-social-register-holder input[type="password"]::-webkit-input-placeholder,
+.qode-social-reset-password-holder input[type="text"]::-webkit-input-placeholder,
+.qode-social-reset-password-holder input[type="email"]::-webkit-input-placeholder,
+.qode-social-reset-password-holder input[type="password"]::-webkit-input-placeholder,
+.qode-membership-input-holder .qode-membership-input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.qode-social-login-holder input[type="text"]::-moz-placeholder,
+.qode-social-login-holder input[type="email"]::-moz-placeholder,
+.qode-social-login-holder input[type="password"]::-moz-placeholder,
+.qode-social-register-holder input[type="text"]::-moz-placeholder,
+.qode-social-register-holder input[type="email"]::-moz-placeholder,
+.qode-social-register-holder input[type="password"]::-moz-placeholder,
+.qode-social-reset-password-holder input[type="text"]::-moz-placeholder,
+.qode-social-reset-password-holder input[type="email"]::-moz-placeholder,
+.qode-social-reset-password-holder input[type="password"]::-moz-placeholder,
+.qode-membership-input-holder .qode-membership-input::-moz-placeholder {
+  color: #000;
+}
+
+.qode-social-login-holder input[type="text"]:-ms-input-placeholder,
+.qode-social-login-holder input[type="email"]:-ms-input-placeholder,
+.qode-social-login-holder input[type="password"]:-ms-input-placeholder,
+.qode-social-register-holder input[type="text"]:-ms-input-placeholder,
+.qode-social-register-holder input[type="email"]:-ms-input-placeholder,
+.qode-social-register-holder input[type="password"]:-ms-input-placeholder,
+.qode-social-reset-password-holder input[type="text"]:-ms-input-placeholder,
+.qode-social-reset-password-holder input[type="email"]:-ms-input-placeholder,
+.qode-social-reset-password-holder input[type="password"]:-ms-input-placeholder,
+.qode-membership-input-holder .qode-membership-input:-ms-input-placeholder {
+  color: #000;
+}
+
+.qode-membership-input-holder label {
+  display: block;
+  margin: 0 0 5px;
+}
+
+.qode-membership-response-holder .qode-membership-response {
+  display: block;
+  margin: 14px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.qode-membership-response-holder .qode-membership-response.qode-membership-message-succes {
+  color: #000;
+}
+
+.qode-membership-response-holder .qode-membership-response.qode-membership-message-error {
+  color: #ff3d27;
+}
+
+.qode-wp-register-holder .qode-register-notice h5 {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Qode Membership Plugin Style - end
+   ========================================================================== */
+/* Dashboard page - start
+   ========================================================================== */
+.qode-membership-main-wrapper {
+  padding-bottom: 50px;
+}
+
+.qode-membership-dashboard-nav-holder,
+.qode-membership-dashboard-content-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  box-sizing: border-box;
+}
+
+.qode-membership-dashboard-nav-holder {
+  width: 30%;
+  padding: 0 30px 0 0;
+  margin: 0 0 40px;
+}
+
+.qode-membership-dashboard-nav-holder ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-top: 1px solid #e0dede;
+}
+
+.qode-membership-dashboard-nav-holder ul li {
+  border-bottom: 1px solid #e0dede;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.qode-membership-dashboard-nav-holder ul li a {
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.qode-membership-dashboard-nav-holder ul li a.active, .qode-membership-dashboard-nav-holder ul li a:hover {
+  color: #e6ae48;
+}
+
+.qode-membership-dashboard-content-holder {
+  width: 70%;
+  padding: 0 0 0 30px;
+  margin: 0 0 40px;
+}
+
+.qode-membership-dashboard-content-holder .qode-profile-image {
+  border-radius: 100%;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.qode-membership-dashboard-content-holder .qode-profile-image img {
+  display: block;
+  position: relative;
+}
+
+.qode-membership-dashboard-content-holder .qode-membership-dashboard-page-title {
+  margin: 0 0 23px;
+}
+
+.qode-membership-dashboard-content-holder .qode-membership-dashboard-page-content p span {
+  font-weight: 400;
+}
+
+/* Dashboard page - end
+   ========================================================================== */
+/* Login/Register form - start
+   ========================================================================== */
+.qode-login-register-holder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1002;
+}
+
+.qode-login-register-holder .qode-login-register-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.qode-login-register-content {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.qode-login-register-content.qode-user-not-logged-in {
+  width: 600px;
+}
+
+.qode-login-register-content.qode-user-not-logged-in ul li {
+  width: 33.33%;
+}
+
+.qode-login-register-content.qode-user-not-logged-in .qode-login-content-inner,
+.qode-login-register-content.qode-user-not-logged-in .qode-register-content-inner,
+.qode-login-register-content.qode-user-not-logged-in .qode-reset-pass-content-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.qode-login-register-content ul {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+.qode-login-register-content ul li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.qode-login-register-content ul li.ui-state-active {
+  background-color: #fff;
+}
+
+.qode-login-register-content ul li a {
+  display: block;
+  color: #000;
+  font-size: 13px;
+  line-height: inherit;
+  font-weight: 600;
+}
+
+.qode-login-register-content .qode-login-content-inner,
+.qode-login-register-content .qode-register-content-inner,
+.qode-login-register-content .qode-reset-pass-content-inner {
+  padding: 30px;
+}
+
+.qode-login-register-content .qode-lost-pass-remember-holder {
+  display: block;
+}
+
+.qode-login-register-content .qode-lost-pass-remember-holder .qode-login-remember {
+  position: relative;
+  display: block;
+  margin-top: 5px;
+}
+
+.qode-login-register-content .qode-lost-pass-remember-holder .qode-login-remember > * {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.qode-login-register-content .qode-lost-pass-remember-holder label {
+  font-size: 12px;
+  line-height: 11px;
+  color: #6d6d6d;
+}
+
+.qode-login-register-content .qode-lost-pass-remember-holder input {
+  margin: -2px 0 0;
+}
+
+.qode-login-register-content .qode-lost-pass-remember-holder .qode-btn {
+  margin: 10px 0 0;
+  width: 100%;
+}
+
+.qode-login-register-content .qode-login-action-btn {
+  position: relative;
+  display: block;
+  margin: 10px 0 15px;
+  color: #6d6d6d;
+  font-size: 13px;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.qode-login-register-content .qode-login-action-btn:hover {
+  color: #000;
+}
+
+.qode-login-register-content input[type="text"],
+.qode-login-register-content input[type="email"],
+.qode-login-register-content input[type="password"] {
+  margin-bottom: 10px;
+  border: 1px solid #d6d6d6;
+}
+
+.qode-login-register-content .qode-login-button-holder .qode-btn,
+.qode-login-register-content .qode-register-button-holder .qode-btn,
+.qode-login-register-content .qode-reset-password-button-holder .qode-btn {
+  margin: 10px 0 0;
+  width: 100%;
+}
+
+.qode-login-register-content .qode-login-form-social-login {
+  background-color: #f9f9f9;
+  border-top: 1px solid #ebebeb;
+  padding: 23px 0 34px;
+  margin: 12px 0 0;
+  text-align: center;
+}
+
+.qode-login-register-content .qode-login-form-social-login .qode-login-social-title {
+  margin-bottom: 15px;
+}
+
+.qode-login-register-content .qode-login-form-social-login form {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.qode-login-register-content .qode-login-form-social-login .qode-google-login .qode-btn-text,
+.qode-login-register-content .qode-login-form-social-login .qode-facebook-login .qode-btn-text {
+  margin: 0;
+}
+
+.qode-login-register-content .qode-login-form-social-login .qode-facebook-login,
+.qode-login-register-content .qode-login-form-social-login .qode-google-login {
+  padding: 0;
+}
+
+.qode-login-register-content .qode-login-form-social-login .qode-facebook-login .qode-btn-text,
+.qode-login-register-content .qode-login-form-social-login .qode-google-login .qode-btn-text {
+  line-height: 30px;
+  padding: 0 12px 0 10px;
+}
+
+.qode-login-register-content .qode-login-form-social-login .qode-facebook-login .qode-btn-icon-holder,
+.qode-login-register-content .qode-login-form-social-login .qode-google-login .qode-btn-icon-holder {
+  float: left;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.qode-login-register-content .qode-login-form-social-login .qode-facebook-login .qode-btn-icon-holder .qode-btn-icon-elem,
+.qode-login-register-content .qode-login-form-social-login .qode-google-login .qode-btn-icon-holder .qode-btn-icon-elem {
+  vertical-align: baseline;
+}
+
+/* Login/Register form - end
+   ========================================================================== */
+/* Login/Register widget - start
+   ========================================================================== */
+/* User not logged in */
+.qode-login-register-widget.qode-user-not-logged-in {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.qode-menu-area .qode-login-register-widget.qode-user-not-logged-in {
+  height: 100%;
+}
+
+.qode-sidebar .qode-login-register-widget.qode-user-not-logged-in {
+  width: 100%;
+}
+
+.qode-login-register-widget.qode-user-not-logged-in .qode-login-opener {
+  /* Top bar */
+  /* Menu area */
+}
+
+.qode-login-register-widget.qode-user-not-logged-in .qode-login-opener:before {
+  position: relative;
+  display: inline-block;
+  top: -1px;
+  font-family: 'ElegantIcons';
+  content: "\e08a";
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.header_top .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener {
+  color: #696969;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 0 10px;
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener:hover {
+  color: #000;
+}
+
+.dark:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener {
+  color: #000 !important;
+}
+
+.dark:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.light:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener {
+  color: #fff !important;
+}
+
+.light:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* User logged in */
+.qode-login-register-widget.qode-user-logged-in {
+  position: relative;
+  display: inline-table;
+  vertical-align: middle;
+  height: 100%;
+  /* Top bar and menu area dropdown position */
+  /* Menu area style */
+  /* Top bar style */
+}
+
+.qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  margin: 0 5px 0 0;
+  border-radius: 100%;
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown,
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown {
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  left: 0;
+  opacity: 0;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  width: 193px;
+  box-sizing: border-box;
+  visibility: hidden;
+  z-index: 100;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li,
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li {
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li a,
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li a {
+  display: block;
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in:hover .qode-login-dropdown,
+.header_bottom .qode-login-register-widget.qode-user-logged-in:hover .qode-login-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in {
+  cursor: pointer;
+  /* User part */
+  /* Dropdown part */
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user {
+  height: 100%;
+  display: table;
+  vertical-align: middle;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span {
+  color: #696969;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span .qode_icon_font_elegant {
+  top: 2px;
+  position: relative;
+  left: -4px;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in:hover .qode-logged-in-user .qode-logged-in-user-inner > span {
+  color: #000;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown {
+  border-top: 5px solid #e6ae48;
+  background-color: #fff;
+  padding: 14px 0 22px;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li a {
+  border-bottom: 1px solid transparent;
+  color: #a6a6a6;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  height: auto;
+  line-height: 34px;
+  margin: 0 24px;
+  padding: 0 4px;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li a:hover {
+  color: #e6ae48;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li:last-child a {
+  border: 0;
+}
+
+.header_bottom .qode-login-register-widget.qode-user-logged-in:hover .qode-login-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dark:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span span,
+.dark:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span i {
+  color: #000 !important;
+}
+
+.dark:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span span:hover,
+.dark:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span i:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.light:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span span,
+.light:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span i {
+  color: #fff !important;
+}
+
+.light:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span span:hover,
+.light:not(.sticky):not(.scrolled) .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span i:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in {
+  cursor: pointer;
+  /* User part */
+  /* Dropdown part */
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span {
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown {
+  background-color: #212121;
+  padding: 15px 0;
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li a {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 8px 20px;
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header_top .qode-login-register-widget.qode-user-logged-in:hover .qode-login-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Login/Register widget - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../select-membership/assets/css/qode-membership.css.map */

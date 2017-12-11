@@ -1,0 +1,199 @@
+/* Login/Register form - start
+   ========================================================================== */
+
+.qode-login-register-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1002;
+
+    .qode-login-register-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        @include qodeTransform(translateY(-50%));
+    }
+}
+
+
+
+.qode-login-register-content {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    &.qode-user-not-logged-in{
+        width: 600px;
+
+        ul li {
+            width: 33.33%;
+        }
+
+        .qode-login-content-inner,
+        .qode-register-content-inner,
+        .qode-reset-pass-content-inner{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        clear: both;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            line-height: 60px;
+            text-align: center;
+            background-color: #f8f8f8;
+
+            &.ui-state-active {
+                background-color: #fff;
+            }
+
+            a {
+                display: block;
+                color: #000;
+                font-size: 13px;
+                line-height: inherit;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .qode-login-content-inner,
+    .qode-register-content-inner,
+    .qode-reset-pass-content-inner{
+        padding: 30px;
+    }
+
+    .qode-lost-pass-remember-holder {
+        display: block;
+
+        .qode-login-remember {
+            position: relative;
+            display: block;
+            margin-top: 5px;
+
+            & > * {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        label {
+            font-size: 12px;
+            line-height: 11px;
+            color: #6d6d6d;
+        }
+
+        input {
+            margin: -2px 0 0;
+        }
+
+        .qode-btn {
+            margin: 10px 0 0;
+            width: 100%;
+        }
+    }
+
+    .qode-login-action-btn {
+        position: relative;
+        display: block;
+        margin: 10px 0 15px;
+        color: #6d6d6d;
+        font-size: 13px;
+        -webkit-transition: color 0.2s ease-out;
+        -moz-transition: color 0.2s ease-out;
+        transition: color 0.2s ease-out;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"]{
+        margin-bottom: 10px;
+        border: 1px solid #d6d6d6;
+    }
+
+    .qode-login-button-holder,
+    .qode-register-button-holder,
+    .qode-reset-password-button-holder {
+        .qode-btn {
+            margin: 10px 0 0;
+            width: 100%;
+        }
+    }
+
+    .qode-login-form-social-login {
+        background-color: #f9f9f9;
+        border-top: 1px solid #ebebeb;
+        padding: 23px 0 34px;
+        margin: 12px 0 0;
+        text-align: center;
+
+        .qode-login-social-title{
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .qode-google-login,
+        .qode-facebook-login {
+            .qode-btn-text {
+                margin: 0;
+            }
+        }
+
+        .qode-facebook-login,
+        .qode-google-login{
+            padding: 0;
+
+            .qode-btn-text{
+                line-height: 30px;
+                padding: 0 12px 0 10px;
+            }
+
+            .qode-btn-icon-holder{
+                float: left;
+                font-size: 13px;
+                padding: 6px 10px;
+                border-right: 1px solid rgba(255,255,255,0.2);
+            }
+
+            .qode-btn-icon-holder .qode-btn-icon-elem{
+                vertical-align: baseline;
+            }
+        }
+
+    }
+}
+
+/* Login/Register form - end
+   ========================================================================== */

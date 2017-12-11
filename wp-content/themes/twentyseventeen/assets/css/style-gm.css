@@ -1,0 +1,20 @@
+
+/* Gelson Merisio */
+.navigation_top {
+	background: #26326A;
+	border-bottom: 1px solid #26326A;
+	border-top: 1px solid #26326A;
+}
+
+.main-navigation a {
+	color: #fff;
+	text-transform: uppercase
+}
+
+.main-navigation a:hover {
+	color: #fff;
+}
+
+.navigation-top .current-menu-item > a, .navigation-top .current_page_item > a {
+	color: #fff;
+}

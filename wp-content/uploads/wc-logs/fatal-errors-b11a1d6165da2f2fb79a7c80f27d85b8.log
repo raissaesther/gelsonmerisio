@@ -1,0 +1,5 @@
+2017-12-11T16:10:23+00:00 CRITICAL Uncaught Error: Call to undefined function qode_options() in /Users/raissaesther/Sites/montre.com.br/web/gelsonmerisio/wp-content/themes/stockholm/css/style_dynamic.php:4355
+Stack trace:
+#0 {main}
+  thrown
+

@@ -1,0 +1,106 @@
+/* ==========================================================================
+# Restaurant Menu List style - begin
+========================================================================== */
+
+.qode-restaurant-menu-list {
+	ul {
+		list-style-type: none;
+
+		li {
+			margin-bottom: 25px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.qode-rml-title-holder {
+		display: table-cell;
+		width: 1%;
+		white-space: nowrap;
+		padding-right: 5px;
+	}
+
+	.qode-rml-line {
+		height: 3px;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		display: table-cell;
+		width: 98%;
+		z-index: 1;
+		position: relative;
+		bottom: 2px;
+	}
+
+	.qode-rml-price-holder {
+		display: table-cell;
+		width: 1%;
+		padding-left: 7px;
+		white-space: nowrap;
+	}
+
+	.qode-rml-bottom-holder {
+		position: relative;
+		top: 5px;
+	}
+	
+	.qode-rml-description-holder {
+		float: left;
+		width: 70%;
+
+		&.qode-rml-description-full {
+			width: 100%;
+		}
+	}
+
+	.qode-rml-label-holder {
+		float: right;
+		position: relative;
+		width: 30%;
+		text-align: right;
+
+		.qode-rml-label {
+			background-color: $first-main-color;
+			color: #000;
+			font-style: italic;
+			padding: 3px 13px;
+			text-align: center;
+		}
+	}
+
+	&.qode-rml-with-featured-image {
+		.qode-rml-item-content {
+			padding-left: 95px;
+		}
+
+		.qode-rml-item-image {
+			float: left;
+			width: 70px;
+			position: relative;
+
+			a {
+				display: block;
+			}
+
+			img {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&.qode-rml-light {
+		.qode-rml-title,
+		.qode-rml-price,
+		.qode-rml-label {
+			color: #fff;
+		}
+
+		.qode-rml-line {
+			border-bottom: 2px dotted #000;
+		}
+	}
+}
+
+/* ==========================================================================
+# Restaurant Menu List style - end
+========================================================================== */

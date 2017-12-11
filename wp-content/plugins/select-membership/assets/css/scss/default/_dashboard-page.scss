@@ -1,0 +1,73 @@
+/* Dashboard page - start
+   ========================================================================== */
+.qode-membership-main-wrapper {
+    padding-bottom: 50px;
+}
+.qode-membership-dashboard-nav-holder,
+.qode-membership-dashboard-content-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    box-sizing: border-box;
+}
+.qode-membership-dashboard-nav-holder {
+    width: 30%;
+    padding: 0 30px 0 0;
+    margin: 0 0 40px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border-top: 1px solid #e0dede;
+
+        li {
+            border-bottom: 1px solid #e0dede;
+            margin: 0;
+            padding: 10px 0;
+
+            a{
+                color: #222;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 16px;
+
+                &.active,
+                &:hover{
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+}
+
+.qode-membership-dashboard-content-holder {
+    width: 70%;
+    padding: 0 0 0 30px;
+    margin: 0 0 40px;
+
+    .qode-profile-image{
+        border-radius: 100%;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+
+        img{
+            display: block;
+            position: relative;
+        }
+    }
+
+    .qode-membership-dashboard-page-title {
+        margin: 0 0 23px;
+    }
+
+    .qode-membership-dashboard-page-content p span {
+        font-weight: 400;
+    }
+}
+
+/* Dashboard page - end
+   ========================================================================== */

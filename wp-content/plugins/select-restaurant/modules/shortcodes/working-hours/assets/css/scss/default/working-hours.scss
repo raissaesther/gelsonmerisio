@@ -1,0 +1,126 @@
+.qode-working-hours-holder {
+	position: relative;
+
+	.qode-wh-title {
+		text-align: center;
+		margin-bottom: 15px;
+
+		.qode-wh-title-accent-word {
+			color: $first-main-color;
+		}
+	}
+
+	.qode-wh-item {
+		position: relative;
+		margin-bottom: 6px;
+		display: table;
+
+		* {
+			font-family: inherit !important;
+			font-size: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+			color: inherit !important;
+			font-style: inherit !important;
+			letter-spacing: inherit !important;
+			text-transform: inherit !important;
+		}
+	}
+
+	.qode-wh-day {
+		padding-right: 3px;
+		display: table-cell;
+		width: 1%;
+		white-space: nowrap;
+
+		.qode-wh-icon {
+			margin-right: 2px;
+		}
+	}
+
+	.qode-wh-hours {
+		padding-left: 4px;
+		display: table-cell;
+		width: 1%;
+		white-space: nowrap;
+	}
+
+	.qode-wh-dots {
+		display: table-cell;
+		width: 98%;
+		z-index: 1;
+		position: relative;
+
+		.qode-wh-dots-inner {
+			border-bottom: 1px dashed currentColor;
+			display: block;
+		}
+	}
+
+	&.qode-wh-with-frame {
+		color: #fff;
+
+		padding: 28px;
+		background-image: url(../img/wh-pattern.png);
+		background-repeat: repeat;
+
+		&.qode-wh-with-bg-image {
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.qode-wh-holder-inner {
+			padding: 18px 26px 10px;
+			position: relative;
+		}
+
+		.qode-wh-title {
+			color: #fff;
+		}
+
+		.qode-wh-frame,
+		.qode-wh-frame-2 {
+			&:before,
+			&:after {
+				position: absolute;
+				content: '';
+			}
+		}
+
+		.qode-wh-frame {
+			&:before {
+				top: 0;
+				width: 100%;
+				height: 3px;
+				left: 0;
+				border-top: 1px solid #515151;
+			}
+
+			&:after {
+				bottom: 0;
+				width: 100%;
+				height: 3px;
+				left: 0;
+				border-bottom: 1px solid #515151;
+			}
+		}
+
+		.qode-wh-frame-2 {
+			&:before {
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 3px;
+				border-left: 1px solid #515151;
+			}
+
+			&:after {
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 3px;
+				border-right: 1px solid #515151;
+			}
+		}
+	}
+}
