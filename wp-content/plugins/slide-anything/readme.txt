@@ -3,7 +3,7 @@ Contributors: simonpedge
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RP7JLGK6VT252
 Tags: slider, carousel, content slider, responsive slider, html slider, owl carousel
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.9.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,9 +13,6 @@ Create responsive carousels or sliders where the content for each slide can be a
 == Description ==
 
 Slide Anything allows you to create a carousel/slider where the content for each slide can be anything you want - images, text, HTML, and even shortcodes. This plugin uses the Owl Carousel 2 jQuery plugin, and lets you create beautiful, touch enabled, responsive carousels and sliders.
-
-NOTE: UPGRADING TO VERSION 2.0!!!
-After upgrading to Slide Anything version 2.0, if you are experiencing issues with your existing sliders, please RE-SAVE your existing sliders - by editing each existing SA slider and then clicking the 'Update' button. Also, if you site is running a CDN CACHE, please ensure you reset/clear this cache.
 
 = Slide Anything Version 2 =
 
@@ -177,6 +174,24 @@ The `SLIDE STYLE` settings are the style settings for each individual slide with
 = 2.0.16 =
 * Bug Fix: Modified WP Dashboard PHP code so that only a Slider 'CSS ID' containing letters (upper/lowercase) or Underscore '_' characters will be accepted. Using Dashes '-' within the CSS ID would cause a Javascript error.
 
+= 2.0.17 =
+* Added a new 'Slide By' setting to set the number of slides to slide per transition
+
+= 2.0.18 =
+* Minor Bug Fix
+
+= 2.1.0 =
+* Replaced 'Owl Carousel 2.2.1' with 'Owl Carousel 2.3 BETA'.
+* Upgrading Owl Carousel fixes an issue with Slide Anything that has been reported to me on numerous occasions - namely if you switch TABS within your browser, switch to another application, or minimise your browser window, then the Slider/Carousel stops (i.e. no more transitions), and the page needs to be reloaded to 'restart' the slider.
+* Although a BETA, version 2.3 seems pretty stable, and OC has been sitting at version 2.1.1 for over a year now.
+
+= 2.1.1 =
+* Bug Fix - Owl Carousel changed the CSS Style used for slide images in version 2.3. Changed the CSS style for images back to what was used in version 2.2.1 of Owl Carousel, so that sliders already created on sites continue to look the same.
+
+= 2.1.2 =
+* Added a new feature to allow you to set slider minimum height in pixels
+* Added a new feature so that each slide within a slider has its own unique CSS ID
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -266,3 +281,21 @@ The `SLIDE STYLE` settings are the style settings for each individual slide with
 
 = 2.0.16 =
 * Bug Fix: Modified WP Dashboard PHP code so that only a Slider 'CSS ID' containing letters (upper/lowercase) or Underscore '_' characters will be accepted. Using Dashes '-' within the CSS ID would cause a Javascript error.
+
+= 2.0.17 =
+* Added a new 'Slide By' setting to set the number of slides to slide per transition
+
+= 2.0.18 =
+* Minor Bug Fix
+
+= 2.1.0 =
+* Replaced 'Owl Carousel 2.2.1' with 'Owl Carousel 2.3 BETA'.
+* Upgrading Owl Carousel fixes an issue with Slide Anything that has been reported to me on numerous occasions - namely if you switch TABS within your browser, switch to another application, or minimise your browser window, then the Slider/Carousel stops (i.e. no more transitions), and the page needs to be reloaded to 'restart' the slider.
+* Although a BETA, version 2.3 seems pretty stable, and OC has been sitting at version 2.1.1 for over a year now.
+
+= 2.1.1 =
+* Bug Fix - Owl Carousel changed the CSS Style used for slide images in version 2.3. Changed the CSS style for images back to what was used in version 2.2.1 of Owl Carousel, so that sliders already created on sites continue to look the same.
+
+= 2.1.2 =
+* Added a new feature to allow you to set slider minimum height in pixels
+* Added a new feature so that each slide within a slider has its own unique CSS ID

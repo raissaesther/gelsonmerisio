@@ -28,10 +28,11 @@ var paspartu_width_init = 0.02;
 var search_header_height = 50;
 var add_for_admin_bar = 0;
 	header_height = 50;
+	min_header_height_sticky = 40;
 var logo_height = 130; // stockholm logo height
 var logo_width = 280; // stockholm logo width
-	logo_height = 56;
-	logo_width = 86;
+	logo_height = 161;
+	logo_width = 200;
 	
 	header_top_height = 0;
 
@@ -44,7 +45,7 @@ finished_text = 'No more posts';
 
 var piechartcolor;
 piechartcolor	= "#e6ae48";
-	piechartcolor = "#26326a";
+	piechartcolor = "#dc6627";
 
 var geocoder;
 var map;
@@ -155,8 +156,8 @@ function showContactMap() {
 }
 
 var no_ajax_pages = [];
-var qode_root = 'http://localhost/montre.com.br/web/gelsonmerisio/';
-var theme_root = 'http://localhost/montre.com.br/web/gelsonmerisio/wp-content/themes/stockholm';
+var qode_root = 'http://montre.com.br/web/gelsonmerisio/site/';
+var theme_root = 'http://montre.com.br/web/gelsonmerisio/site/wp-content/themes/stockholm';
 var header_style_admin = "";
 if(typeof no_ajax_obj !== 'undefined') {
 	no_ajax_pages = no_ajax_obj.no_ajax_pages;

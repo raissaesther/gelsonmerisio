@@ -61,7 +61,8 @@
 .autohide-arrows:hover .owl-nav {
 	display:block !important;
 }
-.sa_owl_theme .owl-nav div {
+.sa_owl_theme .owl-nav div,
+.sa_owl_theme .owl-nav button {
 	position:absolute;
 	top:50%;
 	padding:2px 0px !important;
@@ -174,10 +175,13 @@
 	background-color:rgba(255,255,255,0.8) !important;
 }
 
-
+/* MAGNIFIC POPUP */
 .sa_custom_popup {
 	position:relative;
 	padding:20px;
 	width:auto;
 	margin:20px auto;
+}
+.mfp-hide {
+	display: none !important;
 }

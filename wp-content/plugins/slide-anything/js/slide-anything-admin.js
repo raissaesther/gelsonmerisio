@@ -19,6 +19,20 @@ jQuery(function() {
 		}
 	});
 	jQuery("#sa_slide_duration").val(jQuery("#jq_slider_duration").slider("value"));
+
+	// ##### JQUERY-UI - SLIDE BY SLIDER/INPUT #####
+	var init_value = jQuery("#sa_slide_by").val();
+	jQuery("#jq_slider_by").slider({
+		range:"max",
+		min:1,
+		max:12,
+		step:1,
+		value:init_value,
+		slide:function(event, ui) {
+			jQuery("#sa_slide_by").val(ui.value);
+		}
+	});
+	jQuery("#sa_slide_by").val(jQuery("#jq_slider_by").slider("value"));
 	
 	// ##### JQUERY-UI - SLIDE TRANSITION SLIDER/INPUT #####
 	var init_value = jQuery("#sa_slide_transition").val();
@@ -261,6 +275,11 @@ jQuery(function() {
 		if (slide_min_height_type == "percent") {
 			document.getElementById('sa_slide_min_height').value = document.getElementById('sa_slide_min_height_hidden').value;
 			document.getElementById('sa_slide_min_height_wrapper').style.display = 'block';
+			document.getElementById('mh_suffix').innerHTML = '%';
+		} else if (slide_min_height_type == 'px') {
+			document.getElementById('sa_slide_min_height').value = document.getElementById('sa_slide_min_height_hidden').value;
+			document.getElementById('sa_slide_min_height_wrapper').style.display = 'block';
+			document.getElementById('mh_suffix').innerHTML = 'px';
 		} else if (slide_min_height_type == '43') {
 			document.getElementById('sa_slide_min_height').value = 'aspect43';
 			document.getElementById('sa_slide_min_height_wrapper').style.display = 'none';
@@ -280,13 +299,18 @@ jQuery(function() {
 	jQuery('#sa_slide_min_height_wrapper .ui-spinner-button').click(function() {
 		jQuery(this).siblings('input').change();
 	});
-	// ##### CHANGE EVENT HANDLER FOR SLIDE MINIMUM HEIGHT (PIXELS) #####
+	// ##### CHANGE EVENT HANDLER FOR SLIDE MINIMUM HEIGHT (PERCENT/PIXELS) #####
 	jQuery('#sa_slide_min_height').change(function() {
 		var slide_min_height = document.getElementById('sa_slide_min_height').value;
+		var min_height_type = jQuery('input[name=sa_slide_min_height_type]:checked').val();
 		if (jQuery.isNumeric(slide_min_height)) {
 			if ((slide_min_height >= 0) && (slide_min_height <= 999)) {
 				// valid number
-				document.getElementById('sa_slide_min_height_hidden').value = slide_min_height;
+				if (min_height_type == 'percent') {
+					document.getElementById('sa_slide_min_height_hidden').value = slide_min_height;
+				} else {
+					document.getElementById('sa_slide_min_height_hidden').value = slide_min_height + 'px';
+				}
 			} else {
 				document.getElementById('sa_slide_min_height').value = '0'; // number out of range
 				document.getElementById('sa_slide_min_height_hidden').value = '0';

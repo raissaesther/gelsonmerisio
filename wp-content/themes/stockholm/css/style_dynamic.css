@@ -1,4 +1,12 @@
 
+    /* Webkit */
+    ::selection {
+    background: #dc6627;
+    }
+    /* Gecko/Mozilla */
+    ::-moz-selection {
+    background: #dc6627;
+    }
 
 
 	h6, h6 a,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,a,p a,
@@ -27,10 +35,10 @@
 	.blog_holder.masonry article.format-link .post_text .post_text_inner:hover .link_mark,
 	.blog_holder.masonry_full_width article.format-quote .post_text .post_text_inner:hover .qoute_mark,
 	.blog_holder.masonry_full_width article.format-link .post_text .post_text_inner:hover .link_mark,
-	.blog_holder article.format-link .post_text .post_text_inner:hover .post_social .post_comments i,
+	.blog_holder article.format-link .post_text .post_text_inner:hover .post_social .post_comments i, 
 	.blog_holder article.format-link .post_text .post_text_inner:hover .post_social .blog_like i,
 	.blog_holder article.format-link .post_text .post_text_inner:hover .post_social .social_share_holder > a > i,
-	.blog_holder article.format-quote .post_text .post_text_inner:hover .post_social .post_comments i,
+	.blog_holder article.format-quote .post_text .post_text_inner:hover .post_social .post_comments i, 
 	.blog_holder article.format-quote .post_text .post_text_inner:hover .post_social .blog_like i,
 	.blog_holder article.format-quote .post_text .post_text_inner:hover .post_social .social_share_holder > a > i,
 	.comment_holder .comment .text .comment_date,
@@ -59,7 +67,7 @@
 	.q_dropcap,
 	.price_in_table .value,
 	.price_in_table .price,
-	.q_font_elegant_holder.q_icon_shortcode:hover,
+	.q_font_elegant_holder.q_icon_shortcode:hover, 
 	.q_font_awsome_icon_holder.q_icon_shortcode:hover,
 	.q_icon_with_title.normal_icon .icon_holder:hover .icon_text_icon,
 	.box_holder_icon_inner.normal_icon .icon_holder_inner:hover .icon_text_icon,
@@ -104,7 +112,7 @@
     .product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse a:hover,
     .product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse a:hover
 	{
-	    color: #26326a;
+	    color: #dc6627;
 	}
 
 	.popup_menu:hover .line,
@@ -180,16 +188,16 @@
     .product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-add-button a,
     .product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse a,
     .product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse a{
-	    background-color: #26326a;
+	    background-color: #dc6627;
 	}
 
-
+	
 	.q_image_with_text_over:hover .shader{
-		background-color: rgba(38,50,106,0.9);
+		background-color: rgba(220,102,39,0.9);
 	}
 
 	.q_circles_holder .q_circle_inner:hover .q_circle_inner2{
-	    background-color: #26326a !important;
+	    background-color: #dc6627 !important;
 	}
 
 	.drop_down .second,
@@ -203,7 +211,7 @@
 	.contact_form  textarea:focus,
 	.q_accordion_holder .ui-accordion-header .accordion_mark,
 	.testimonials_holder.light .flex-direction-nav a:hover,
-	.q_progress_bars_icons_inner.circle .bar .bar_noactive,
+	.q_progress_bars_icons_inner.circle .bar .bar_noactive, 
 	.q_progress_bars_icons_inner.square .bar .bar_noactive,
 	.animated_icon_inner span.animated_icon_back .animated_icon,
 	.service_table_holder,
@@ -248,128 +256,22 @@
     .product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse a,
     .product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse a
 	{
-	    border-color: #26326a;
+	    border-color: #dc6627;
 	}
 
 	.q_circles_holder .q_circle_inner:hover .q_circle_inner2,
 	.q_circles_holder .q_circle_inner:hover{
-	    border-color: #26326a !important;
+	    border-color: #dc6627 !important;
 	}
 
-			.woocommerce .myaccount_user a,
-		.woocommerce .button,
-		.woocommerce-page .button,
-		.woocommerce button.button,
-		.woocommerce-page button.button,
-		.woocommerce-page input[type="submit"]:not(.qode_search_field),
-		.woocommerce input[type="submit"]:not(.qode_search_field),
-		.woocommerce ul.products li.product .added_to_cart,
-		.woocommerce .select2-container .select2-choice .select2-arrow .select2-arrow:after ,
-		.woocommerce-page .select2-container .select2-choice .select2-arrow:after,
-		.woocommerce-checkout .form-row #billing_country_chzn.chzn-container-single .chzn-single div b:before,
-		.woocommerce-checkout .form-row #shipping_country_chzn.chzn-container-single .chzn-single div b:before,
-		.woocommerce-checkout .form-row .chosen-container-single .chosen-single div b:before,
-		.woocommerce-account .form-row .chosen-container-single .chosen-single div b:before,
-		.woocommerce-checkout .chosen-container .chosen-results li.active-result.highlighted,
-		.woocommerce-account .chosen-container .chosen-results li.active-result.highlighted,
-		.woocommerce ul.products li.product span.product-title:hover,
-		.woocommerce ul.products li.product .price,
-		.woocommerce-page ul.products li.product .price,
-		.woocommerce div.product .summary p.price span.amount,
-		.woocommerce.single-product button.single_add_to_cart_button:hover,
-		.woocommerce .quantity input.qty,
-		.woocommerce #content .quantity input.qty,
-		.woocommerce-page .quantity input.qty,
-		.woocommerce-page #content .quantity input.qty,
-		.woocommerce div.product div.product_meta > span span,
-		.woocommerce div.product div.product_meta > span a,
-		.woocommerce .star-rating,
-		.woocommerce-page .star-rating,
-		.woocommerce div.cart-collaterals div.cart_totals table tr.order-total strong span.amount,
-		.woocommerce-page div.cart-collaterals div.cart_totals table tr.order-total strong span.amount,
-		.woocommerce div.cart-collaterals div.cart_totals table tr.order-total strong,
-		.woocommerce form.checkout table.shop_table tfoot tr.order-total th,
-		.woocommerce form.checkout table.shop_table tfoot tr.order-total td span.amount,
-		.woocommerce aside ul.product_list_widget li > a:hover,
-		aside ul.product-categories li > a:hover,
-		.woocommerce aside ul.product_list_widget li span.amount,
-		aside ul.product_list_widget li span.amount,
-		.woocommerce .widget_shopping_cart_content p.buttons a.button,
-		.woocommerce aside .widget ul.product-categories a:hover,
-		aside .widget ul.product-categories a:hover,
-		.woocommerce-page aside .widget ul.product-categories a:hover,
-		.woocommerce aside.sidebar .woocommerce.widget ul.product-categories ul.children li a:hover,
-		aside ul.product-categories ul.children li a:hover,
-		.woocommerce-page aside.sidebar .woocommerce.widget ul.product-categories ul.children li a:hover,
-		.woocommerce aside.sidebar .woocommerce.widget ul.product-categories  a:hover,
-		aside ul.product-categories a:hover,
-		.woocommerce-page aside.sidebar .woocommerce.widget ul.product-categories li a:hover,
-		.woocommerce .widget_shopping_cart_content .total .amount,
-		.woocommerce-page .widget_shopping_cart_content .total .amount,
-		.woocommerce .select2-results li.select2-highlighted,
-		.woocommerce-page .select2-results li.select2-highlighted,
-		.woocommerce .product .woocommerce-product-rating .woocommerce-review-link:hover,
-		.shopping_cart_header .header_cart:hover i,
-		.shopping_cart_dropdown ul li a:hover,
-		.shopping_cart_dropdown span.total span,
-		.woocommerce .product .woocommerce-product-rating .woocommerce-review-link:hover,
-		.select2-container--default.select2-container--open .select2-selection--single,
-		.select2-container--default .select2-results__option[aria-selected=true],
-		.select2-container--default .select2-results__option--highlighted[aria-selected]{
-			color: #26326a;
-		}
-
-		.woocommerce .button:hover,
-		.woocommerce-page .button:hover,
-		.woocommerce button.button:hover,
-		.woocommerce-page button.button:hover,
-		.woocommerce #submit:hover,
-		.woocommerce ul.products li.product a.qbutton:hover,
-		.woocommerce-page ul.products li.product a.qbutton:hover,
-		.woocommerce ul.products li.product .added_to_cart:hover,
-		.woocommerce-page input[type="submit"]:not(.qode_search_field):hover,
-		.woocommerce input[type="submit"]:not(.qode_search_field):hover,
-		.woocommerce .product .onsale.out-of-stock-button,
-		.woocommerce.single-product button.single_add_to_cart_button,
-		.woocommerce .widget_price_filter .ui-slider-horizontal .ui-slider-range,
-		.woocommerce-page .widget_price_filter .ui-slider-horizontal .ui-slider-range,
-		.woocommerce .quantity .minus:hover,
-		.woocommerce #content .quantity .minus:hover,
-		.woocommerce-page .quantity .minus:hover,
-		.woocommerce-page #content .quantity .minus:hover,
-		.woocommerce .quantity .plus:hover,
-		.woocommerce #content .quantity .plus:hover,
-		.woocommerce-page .quantity .plus:hover,
-		.woocommerce-page #content .quantity .plus:hover,
-		.woocommerce .checkout-opener-text{
-			background-color: #26326a;
-		}
-
-		.woocommerce .button,
-		.woocommerce-page .button,
-		.woocommerce button.button,
-		.woocommerce-page button.button,
-		.woocommerce-page input[type="submit"]:not(.qode_search_field),
-		.woocommerce input[type="submit"]:not(.qode_search_field),
-		.woocommerce ul.products li.product .added_to_cart,
-		.woocommerce.single-product button.single_add_to_cart_button:hover,
-		.woocommerce .quantity .minus:hover,
-		.woocommerce #content .quantity .minus:hover,
-		.woocommerce-page .quantity .minus:hover,
-		.woocommerce-page #content .quantity .minus:hover,
-		.woocommerce .quantity .plus:hover,
-		.woocommerce #content .quantity .plus:hover,
-		.woocommerce-page .quantity .plus:hover,
-		.woocommerce-page #content .quantity .plus:hover{
-			border-color: #26326a;
-		}
-
-
-
-.header_bottom,
-.header_top {
-	background-color: rgba(38,50,106,1);
-}
+	
+    body{
+    	    	    	font-family: 'Open Sans', sans-serif;
+    	    	 color: #393939;     	 font-size: 16px;     	    }
+    	h3, h6, .pagination ul li.active span, .pagination ul li > a.inactive, .subtitle, .blog_holder article .post_info, .comment_holder .comment .text .comment_date, .blog_holder.masonry .post_author, .blog_holder.masonry .post_author a, .blog_holder.masonry_full_width .post_author, .blog_holder.masonry_full_width .post_author a, .latest_post_holder .post_info_section span, .latest_post_holder .post_info_section a, .latest_post_holder .post_author, .latest_post_holder a.post_author_link, .projects_holder article .project_category, .portfolio_slides .project_category, .projects_masonry_holder .project_category, .testimonials .testimonial_text_inner p:not(.testimonial_author), .price_in_table .mark, body div.pp_default .pp_description, .side_menu .widget li,aside.sidebar .widget:not(.woocommerce) li, aside .widget #lang_sel ul li a, aside .widget #lang_sel_click ul li a, section.side_menu #lang_sel ul li a, section.side_menu #lang_sel_click ul li a, footer #lang_sel ul li a, footer #lang_sel_click ul li a, .header_top #lang_sel ul li a, .header_top #lang_sel_click ul li a, .header_bottom #lang_sel ul li a, .header_bottom #lang_sel_click > ul > li a,.single_links_pages span,.gform_wrapper .gsection .gfield_label,.gform_wrapper h2.gsection_title,.gform_wrapper h3.gform_title{
+		    	font-family: 'Open Sans', sans-serif;
+	}
+		
 
 
 
@@ -389,7 +291,7 @@
 		.content .content_inner > .container > .container_inner.default_template_holder{
 			padding-top: 44px !important;
 		}
-	}
+	}	
 
 
 
@@ -399,9 +301,6 @@
 
 
 
-header.sticky .header_bottom{
-	background-color: rgba(38,50,106,1) !important;
-}
 
 
 
@@ -411,7 +310,7 @@ header.sticky .header_bottom{
 			.content{
 			margin-top: -50px;
 		}
-
+	
 	.logo_wrapper,
 	.side_menu_button,
 	.shopping_cart_inner{
@@ -421,7 +320,7 @@ header.sticky .header_bottom{
 			.content.content_top_margin{
 			margin-top: 50px !important;
 		}
-
+		
 
 	header:not(.centered_logo) .header_fixed_right_area {
 	    line-height: 50px;
@@ -436,11 +335,33 @@ header.sticky .header_bottom{
 
 
 
+	header.sticky .logo_wrapper,
+	header.sticky.centered_logo .logo_wrapper,
+	header.sticky .side_menu_button,
+	header.sticky .shopping_cart_inner{
+		height: 40px !important;
+	}
+
+	header.sticky nav.main_menu > ul > li > a,
+	.light.sticky nav.main_menu > ul > li > a,
+	.light.sticky nav.main_menu > ul > li > a:hover,
+	.light.sticky nav.main_menu > ul > li.active > a,
+	.dark.sticky nav.main_menu > ul > li > a,
+	.dark.sticky nav.main_menu > ul > li > a:hover,
+	.dark.sticky nav.main_menu > ul > li.active > a,
+    header.sticky .header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener,
+    header.sticky .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span{
+		line-height: 40px;
+	}
+
+	header.sticky .drop_down .second{
+		top: 41px;
+	}
 
 	header.sticky .header_bottom,
 	header.fixed.scrolled .header_bottom,
 	header.fixed_hiding.scrolled .header_bottom{
-		box-shadow: none;
+		box-shadow: none; 
 		-webkit-box-shadow: none;
 	}
 
@@ -449,10 +370,10 @@ header.sticky .header_bottom{
         @media only screen and (min-width: 1000px){
             header.fixed_hiding .q_logo a,
             header.fixed_hiding .q_logo{
-                max-height: 28px;
+                max-height: 80.5px;
             }
         }
-
+    
 
 
 
@@ -466,27 +387,46 @@ nav.main_menu > ul > li > a{
 nav.main_menu > ul > li > a,
 .header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener,
 .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-logged-in-user .qode-logged-in-user-inner > span{
-	 color: #ffffff; 		    				}
+			font-family: 'Open Sans', sans-serif;
+		 font-size: 14px;     				 letter-spacing: 0px; }
 
 nav.main_menu ul li:hover a,
 header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 .header_bottom .qode-login-register-widget.qode-user-not-logged-in .qode-login-opener:hover,
 .header_bottom .qode-login-register-widget.qode-user-logged-in:hover .qode-logged-in-user .qode-logged-in-user-inner > span{
-	color: #ffffff;
+	color: #dc6627;
 }
 
 	nav.main_menu > ul > li.active > a{
-	    color: #9fc44c	}
+	    color: #dc6627	}
 
+    nav.main_menu > ul > li:not(:first-child):before,
+    header.stick_with_left_right_menu.sticky nav.main_menu.right_side > ul > li:not(:first-child):before{
+                 font-size: 14px;     }
 
 	nav.main_menu > ul > li:not(:first-child):before,
 	header.stick_with_left_right_menu.sticky nav.main_menu.right_side > ul > li:not(:first-child):before,
-	header.stick_with_left_right_menu.sticky nav.main_menu.right_side > ul > li:first-child:before{
-		content: none;
+	header.stick_with_left_right_menu.sticky nav.main_menu.right_side > ul > li:first-child:before{ 
+		content: none; 
 	}
 
+	nav.main_menu > ul > li > a{
+		 padding: 0  15px; 	}
 
 
+.drop_down .second .inner > ul > li > a,
+.drop_down .second .inner > ul > li > h4,
+.drop_down .wide .second .inner > ul > li > h4,
+.drop_down .wide .second .inner > ul > li > a,
+.drop_down .wide .second ul li ul li.menu-item-has-children > a,
+.drop_down .wide .second .inner ul li.sub ul li.menu-item-has-children > a,
+.drop_down .wide .second .inner > ul li.sub .flexslider ul li  h4 a,
+.drop_down .wide .second .inner > ul li .flexslider ul li  h4 a,
+.drop_down .wide .second .inner > ul li.sub .flexslider ul li  h4,
+.drop_down .wide .second .inner > ul li .flexslider ul li  h4,
+.header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown li a{
+			font-family: 'Open Sans', sans-serif !important;
+							}
 	.drop_down .second,
 	.drop_down .narrow .second .inner ul li ul,
     .header_bottom .qode-login-register-widget.qode-user-logged-in .qode-login-dropdown{
@@ -505,8 +445,14 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 
 
+	h3{
+								font-style: normal; 		font-weight: 700; 	    			}
+	h3, h3 a{
+		color: #ffffff; 	}
 
 
+	p{
+		font-size: 16px;color: #393939	}
 
 
 
@@ -609,10 +555,10 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 	#back_to_top > span{
 		font-size: 14px;	}
+	
 
-
-	.qode_image_gallery_no_space .controls a.prev-slide,
-	.qode_image_gallery_no_space .controls a.next-slide,
+	.qode_image_gallery_no_space .controls a.prev-slide, 
+	.qode_image_gallery_no_space .controls a.next-slide, 
 	.qode_carousels .caroufredsel-direction-nav .caroufredsel-navigation-item,
 	.flex-direction-nav a, .caroufredsel-direction-nav a,
 	.portfolio_single .owl-carousel .owl-prev,
@@ -627,7 +573,7 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 			body div.pp_default a.pp_next:after,
 		body div.pp_default a.pp_previous:after{
 		display: inline-block;width: 100%;height: 100%;left: 0;font-size: 14px;		}
-
+		
 
 
 
@@ -652,6 +598,18 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 .q_google_map{
 	height: 750px;
 }
+	.footer_top_holder{
+		background-color:#dc6627;
+	}
+
+
+	.footer_top,
+	.footer_top p,
+    .footer_top span:not(.q_social_icon_holder):not(.fa-stack):not(.social_icon):not(.social_twitter):not(.q_font_elegant_icon),
+    .footer_top li,
+    .footer_top .textwidget,
+    .footer_top .widget_recent_entries>ul>li>span{
+		font-size: 14px;color: #ffffff	}
 
 
 
@@ -659,8 +617,8 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 
 
-
-
+	.footer_top .widget h4 {
+		font-size: 18px;color: #ffffff	}
 
 
 
@@ -691,6 +649,10 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 
 
+    .carousel-control .prev_nav, .carousel-control .next_nav{ 
+    	background-color: #dc6627;	}
+    .carousel-control .prev_nav:hover, .carousel-control .next_nav:hover{ 
+    	background-color: #283466;	}
 
 
 
@@ -726,6 +688,16 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 
 
+    .projects_holder article .portfolio_title, .projects_masonry_holder article .portfolio_title{
+    	margin: 0;
+    }
+    .projects_holder.standard article .portfolio_description, .projects_holder.standard_no_space article .portfolio_description{
+    	padding-bottom: 20px;
+    }
+    .masonry_with_space .projects_holder article .portfolio_description{
+		padding-bottom: 35px;
+	}
+		
 
 
 
@@ -774,14 +746,22 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 
 
+	
+	
+	
 
 
 
+.woocommerce div.product .cart .quantity { height: px;line-height: px;}
 
+.woocommerce .product .quantity .minus,
+	                       .woocommerce .product .quantity .plus,
+	                       .woocommerce .product .quantity input.qty { width: px;height: px;line-height: -2px;}
 
 
 
 
+	
 
 
 
@@ -820,10 +800,3 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 
 
-
-
-
-.qode-working-hours-holder .qode-wh-title .qode-wh-title-accent-word,
-                                    #ui-datepicker-div .ui-datepicker-current-day:not(.ui-datepicker-today) a { color: #26326a;}
-
-#ui-datepicker-div .ui-datepicker-today { background-color: #26326a;}

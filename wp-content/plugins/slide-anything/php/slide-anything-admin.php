@@ -72,6 +72,7 @@ function cpt_slider_plugin_activation() {
 		update_post_meta($cpt_id, 'sa_num_slides', 8);
 		update_post_meta($cpt_id, 'sa_slide_duration', 4);
 		update_post_meta($cpt_id, 'sa_slide_transition', 0.3);
+		update_post_meta($cpt_id, 'sa_slide_by', 1);
 		update_post_meta($cpt_id, 'sa_loop_slider', '1');
 		update_post_meta($cpt_id, 'sa_stop_hover', '1');
 		update_post_meta($cpt_id, 'sa_nav_arrows', '1');
@@ -114,13 +115,7 @@ function version_20_upgrade_notice() {
 	$user_id = $current_user->ID;
 	/* Check that the user hasn't already clicked to ignore the message */
 	if (!get_user_meta($user_id, 'sa_ignore_notice')) {
-		echo "<div class='notice notice-info'>";
-
-		echo "<h3 style='margin:0px !important; padding:15px 0px 10px !important; color:crimson;'>SLIDE ANYTHING - UPGRADING TO VERSION 2.0</h3>";
-		echo "<p style='margin:0px 0px 30px !important;'>If you are upgrading to version 2.0 from a previous version, and are experiencing ";
-		echo "issues with your existing sliders, please <strong>RE-SAVE</strong> all your existing sliders to resolve these issues. ";
-		echo "You do this simply by editing each existing Slide Anything slider and then clicking the UPDATE button.";
-		echo "<br/>ALSO, if you site is running a CDN CACHE, please ensure you reset/clear this cache.</p>";
+		echo "<div class='notice notice-info' style='padding-top:10px;'>";
 
 		echo "<div style='float:left; width:170px; margin-right:15px;'><a href='http://edgewebpages.com/' target='_blank'>";
 		echo "<img style='width:100%;' src='http://edgewebpages.com/wp-content/uploads/2017/06/slide_anything_pro_product_image.png' /></a></div>";
@@ -462,6 +457,15 @@ function cpt_slider_settings_content($post) {
 	echo "<input type='text' id='sa_slide_transition' name='sa_slide_transition' readonly value='".esc_attr($slide_transition)."'><em>seconds</em>\n";
 	echo "<em class='sa_tooltip' href='' title='The time it takes to change from one slide to the next slide'></em></div>\n";
 	echo "<div class='jquery_ui_slider' id='jq_slider_transition'></div><hr/>\n";
+	// SLIDE BY
+	$slide_by = get_post_meta($post->ID, 'sa_slide_by', true);
+	if ($slide_by == '') {
+		$slide_by = 1;
+	}
+	echo "<div class='sa_slider_value'><span>Slide By:</span>";
+	echo "<input type='text' id='sa_slide_by' name='sa_slide_by' readonly value='".esc_attr($slide_by)."'><em>slides</em>";
+	echo "<em class='sa_tooltip' href='' title='The number of slides to slide per transition'></em></div>\n";
+	echo "<div class='jquery_ui_slider' id='jq_slider_by'></div><hr/>\n";
 	echo "<div class='half_width_column'>\n";
 	// LOOP SLIDER
 	$loop_slider = get_post_meta($post->ID, 'sa_loop_slider', true);
@@ -593,6 +597,7 @@ function cpt_slider_settings_content($post) {
 // ##### META BOX CONTENT - 'Slides' BOX #####
 function cpt_slider_slides_content($post) {
 	$num_slides = get_post_meta($post->ID, 'sa_num_slides', true);
+	$slider_css_id = get_post_meta($post->ID, 'sa_css_id', true);
 	$sa_pro_version = validate_slide_anything_pro_registration();
 	// DISABLE VISUAL EDITOR CHECKBOX
 	$disable_visual_editor = get_post_meta($post->ID, 'sa_disable_visual_editor', true);
@@ -749,7 +754,12 @@ function cpt_slider_slides_content($post) {
 	// ###### LOOP TO DISPLAY INPUT ELEMENTS FOR EACH SLIDE ######
 	echo "<div id='slider_accordion'>\n";
 	for ($i = 0; $i < count($slide_data); $i++) {
-		echo "<h3>Slide ".$slide_data[$i]['slide_no']."</h3>\n";
+		// DISPLAY ACCORDION HEADING
+		echo "<h3>Slide ".$slide_data[$i]['slide_no'];
+		$css_id = $slider_css_id."_slide".sprintf('%02d', $slide_data[$i]['slide_no']);
+		// display CSS ID for the current slide
+		echo "<span>#".$css_id."</span>";
+		echo "</h3>\n";
 		echo "<div>\n";
 
 		// ### DISPLAY THE SLIDE CONTENT EDITOR (textarea field) ###
@@ -1507,29 +1517,47 @@ function cpt_slider_style_content($post) {
 	}
 	echo "<div style='padding:5px 0px 10px;'>\n";
 	$tooltip = "The minimum height of each slide. Can be set to a percentage of the slide width, or for image sliders set to a 4:3 or 16:9 aspect ratio.";
-	echo "<div class='ca_style_setting_line' id='ca_style_min_height'><span class='sa_tooltip' title='".esc_attr($tooltip)."'>Min Height:</span>";
+	echo "<div class='ca_style_setting_line' id='ca_style_min_height' style='padding-bottom:7px !important;'>";
+	echo "<span class='sa_tooltip' title='".esc_attr($tooltip)."'>Min Height:</span><br/>";
 	if ($slide_min_height == 'aspect43') {
-		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='percent'/><em>%</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='percent' style='margin-left:20px !important;'/><em>%</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='px'/><em>px</em>";
 		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='43' checked/><em>4:3</em>";
 		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='169'/><em>16:9</em>";
 	} elseif ($slide_min_height == 'aspect169') {
-		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='percent'/><em>%</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='percent' style='margin-left:20px !important;'/><em>%</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='px'/><em>px</em>";
 		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='43'/><em>4:3</em>";
 		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='169' checked/><em>16:9</em>";
+	} elseif (strpos($slide_min_height, 'px') !== false) {
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='percent' style='margin-left:20px !important;'/><em>%</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='px' checked/><em>px</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='43'/><em>4:3</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='169'/><em>16:9</em>";
 	} else {
-		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='percent' checked/><em>%</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='percent' style='margin-left:20px !important;' checked/><em>%</em>";
+		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='px'/><em>px</em>";
 		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='43'/><em>4:3</em>";
 		echo "<input type='radio' name='sa_slide_min_height_type' class='sa_slide_min_height_type' value='169'/><em>16:9</em>";
 	}
 	echo "</div>\n";
 	if (($slide_min_height == 'aspect43') || ($slide_min_height == 'aspect169')) {
-		echo "<div class='ca_style_setting_line' id='sa_slide_min_height_wrapper' style='display:none;'><span style='width:100px;'>&nbsp;</span>";
-		echo "<input type='text' id='sa_slide_min_height' name='sa_slide_min_height' value='".esc_attr($slide_min_height)."'/><em>%</em></div>\n";
+		echo "<div class='ca_style_setting_line' id='sa_slide_min_height_wrapper' style='display:none;'>";
+		echo "<input type='text' id='sa_slide_min_height' name='sa_slide_min_height' value='".esc_attr($slide_min_height)."'/>";
+		echo "<em id='mh_suffix'>".$mh_suffix."</em></div>\n";
 		echo "<input type='hidden' id='sa_slide_min_height_hidden' name='sa_slide_min_height_hidden' value='0'/>\n";
 	} else {
-		echo "<div class='ca_style_setting_line' id='sa_slide_min_height_wrapper'><span style='width:80px;'>&nbsp;</span>";
-		echo "<input type='text' id='sa_slide_min_height' name='sa_slide_min_height' value='".esc_attr($slide_min_height)."'/><em>%</em></div>\n\n";
-		echo "<input type='hidden' id='sa_slide_min_height_hidden' name='sa_slide_min_height_hidden' value='".esc_attr($slide_min_height)."'/>\n";
+		if (strpos($slide_min_height, 'px') !== false) {
+			$mh_value = str_replace('px', '', $slide_min_height);
+			$mh_suffix = 'px';
+		} else {
+			$mh_value = $slide_min_height;
+			$mh_suffix = '%';
+		}
+		echo "<div class='ca_style_setting_line' id='sa_slide_min_height_wrapper'><span style='width:20px;'>&nbsp;</span>";
+		echo "<input type='text' id='sa_slide_min_height' name='sa_slide_min_height' value='".esc_attr($mh_value)."'/>";
+		echo "<em id='mh_suffix'>".$mh_suffix."</em></div>\n";
+		echo "<input type='hidden' id='sa_slide_min_height_hidden' name='sa_slide_min_height_hidden' value='".esc_attr($mh_value)."'/>\n";
 	}
 	echo "</div>\n";
 
@@ -1898,6 +1926,7 @@ function cpt_slider_save_postdata() {
 		update_post_meta($post->ID, 'sa_info_moved', abs(intval($_POST['sa_info_moved'])));									// SANATIZE
 		update_post_meta($post->ID, 'sa_slide_duration', abs(floatval($_POST['sa_slide_duration'])));					// SANATIZE
 		update_post_meta($post->ID, 'sa_slide_transition', abs(floatval($_POST['sa_slide_transition'])));				// SANATIZE
+		update_post_meta($post->ID, 'sa_slide_by', abs(floatval($_POST['sa_slide_by'])));									// SANATIZE
 		if (isset($_POST['sa_loop_slider']) && ($_POST['sa_loop_slider'] == '1')) {
 			update_post_meta($post->ID, 'sa_loop_slider', '1');
 		} else {
@@ -1964,7 +1993,11 @@ function cpt_slider_save_postdata() {
 		update_post_meta($post->ID, 'sa_wrapper_padd_right', abs(intval($_POST['sa_wrapper_padd_right'])));					// SANATIZE
 		update_post_meta($post->ID, 'sa_wrapper_padd_bottom', abs(intval($_POST['sa_wrapper_padd_bottom'])));					// SANATIZE
 		update_post_meta($post->ID, 'sa_wrapper_padd_left', abs(intval($_POST['sa_wrapper_padd_left'])));						// SANATIZE
-		update_post_meta($post->ID, 'sa_slide_min_height_perc', sanitize_text_field($_POST['sa_slide_min_height']));				// SANATIZE
+		if ($_POST['sa_slide_min_height_type'] == 'px') {
+			update_post_meta($post->ID, 'sa_slide_min_height_perc', sanitize_text_field($_POST['sa_slide_min_height']).'px');		// SANATIZE
+		} else {
+			update_post_meta($post->ID, 'sa_slide_min_height_perc', sanitize_text_field($_POST['sa_slide_min_height']));			// SANATIZE
+		}
 		update_post_meta($post->ID, 'sa_slide_padding_tb', abs(floatval($_POST['sa_slide_padding_tb'])));						// SANATIZE
 		update_post_meta($post->ID, 'sa_slide_padding_lr', abs(floatval($_POST['sa_slide_padding_lr'])));						// SANATIZE
 		update_post_meta($post->ID, 'sa_slide_margin_lr', abs(floatval($_POST['sa_slide_margin_lr'])));							// SANATIZE
