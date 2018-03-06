@@ -46,8 +46,9 @@ get_header();
 							<?php  while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<?php $postid = get_the_ID(); ?>
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+								<?php $term = get_term( 1, 'formato' ); ?>
 
-								<li class="col-sm-3 mix <?php echo $term->name; ?> <?php $term = get_term( 1, 'taxonomy_slug' ); ?>">
+								<li class="col-sm-3 mix <?php echo $term->name; ?>">
 									<a class="popup-modal" href="#<?php echo $postid; ?>">
 										<figure>
 											<img src="<?php echo $image[0]; ?>" alt="">
