@@ -41,7 +41,7 @@ get_header();
 
 					<article class="products-list">
 						<ul id="prod-container">
-							<?php   $args = array( 'category_name' => 'saude');
+							<?php   $args = array( 'category_name' => 'realizacoes');
 							$loop = new WP_Query( $args ); ?>
 							<?php  while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<?php $postid = get_the_ID(); ?>
