@@ -21,7 +21,7 @@ get_header();
 
 	<?php get_template_part( 'title' ); ?>
 
-
+TESTE
 
 	<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
 		<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
