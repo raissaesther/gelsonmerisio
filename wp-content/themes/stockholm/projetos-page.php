@@ -10,6 +10,7 @@ $id = $wp_query->get_queried_object_id();
 get_header();
 ?>
 
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
 	<?php if(get_post_meta($id, "qode_page_scroll_amount_for_sticky", true)) { ?>
@@ -20,67 +21,71 @@ get_header();
 
 	<?php get_template_part( 'title' ); ?>
 
+	<?php the_content(); ?>
 
+<?php endwhile; wp_reset_query(); //resetting the page query
+ ?>
+<?php endif; ?>
 
-	<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
-		<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
-			<div class="projeto-e-ideias">
-				<!-- Products list -->
-				<section class="container">
+<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
+	<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
+		<div class="projeto-e-ideias">
+			<!-- Products list -->
+			<section class="container">
 
-					<nav class="products-nav">
-						<ul>
-							<li class="filter" data-filter="all"><a href="#"><h3>Todos</h3></a></li>
-							<li class="filter" data-filter=".noticias"><a href="#"><h3>Notícias</h3></a></li>
-							<li class="filter" data-filter=".artigos"><a href="#"><h3>Artigos</h3></a></li>
-							<li class="filter" data-filter=".projetos"><a href="#"><h3>Projetos</h3></a></li>
-							<li class="filter" data-filter=".realizacoes"><a href="#"><h3>Realizações</h3></a></li>
-						</ul>
-					</nav>
+				<nav class="products-nav">
+					<ul>
+						<li class="filter" data-filter="all"><a href="#"><h3>Todos</h3></a></li>
+						<li class="filter" data-filter=".noticias"><a href="#"><h3>Notícias</h3></a></li>
+						<li class="filter" data-filter=".artigos"><a href="#"><h3>Artigos</h3></a></li>
+						<li class="filter" data-filter=".projetos"><a href="#"><h3>Projetos</h3></a></li>
+						<li class="filter" data-filter=".realizacoes"><a href="#"><h3>Realizações</h3></a></li>
+					</ul>
+				</nav>
 
-					<article class="products-list">
-						<ul id="prod-container">
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-								<?php $postid = get_the_ID(); ?>
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-								<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
+				<article class="products-list">
+					<ul id="prod-container">
+						<?php
+						if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php $postid = get_the_ID(); ?>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+						<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
-								<li class="col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
-									<a class="popup-modal" href="#<?php echo $postid; ?>">
-										<figure>
-											<img src="<?php echo $image[0]; ?>" alt="">
-											<figcaption>
-											</figcaption>
-										</figure>
-										<h3><?php the_title(); ?></h3>
-									</a>
+						<li class="col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
+							<a class="popup-modal" href="#<?php echo $postid; ?>">
+								<figure>
+									<img src="<?php echo $image[0]; ?>" alt="">
+									<figcaption>
+									</figcaption>
+								</figure>
+								<h3><?php the_title(); ?></h3>
+							</a>
 
-									<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
-										<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
-										<header style="text-align: center;text-transform: uppercase;">
-											<h1><?php the_title(); ?></h1>
-										</header>
-										<section style="overflow: hidden;">
-											<figure class="col-md-6" style="overflow:hidden">
-												<img style="width:100%" src="<?php echo $image[0]; ?>">
-											</figure>
-											<article class="col-md-6">
-												<p><?php the_content(); ?></p>
-											</article>
-										</section>
-									</div>
-								</li>
+							<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+								<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
+								<header style="text-align: center;text-transform: uppercase;">
+									<h1><?php the_title(); ?></h1>
+								</header>
+								<section style="overflow: hidden;">
+									<figure class="col-md-6" style="overflow:hidden">
+										<img style="width:100%" src="<?php echo $image[0]; ?>">
+									</figure>
+									<article class="col-md-6">
+										<p><?php the_content(); ?></p>
+									</article>
+								</section>
+							</div>
+						</li>
 
-							<?php  endwhile; wp_reset_postdata(); ?>
-						</ul>
-					</article>
-				</section>
-			</section>
-			<?php the_content(); ?>
-
-		</div>
-	</div>
+					<?php  endwhile; wp_reset_postdata(); ?>
+				</ul>
+			</article>
+		</section>
+	</section>
 </div>
+</div>
+</div>
+
 
 
 <script type="text/javascript">
