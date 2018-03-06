@@ -10,7 +10,6 @@ $id = $wp_query->get_queried_object_id();
 get_header();
 ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
 	<?php if(get_post_meta($id, "qode_page_scroll_amount_for_sticky", true)) { ?>
@@ -84,8 +83,6 @@ get_header();
 </div>
 
 
-<?php endwhile; ?>
-<?php endif; ?>
 <script type="text/javascript">
 jQuery(document).ready(function($){
 	$j('form#contact-form').submit(function(){
