@@ -45,11 +45,12 @@ get_header();
 							$loop = new WP_Query( $args ); ?>
 							<?php  while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<?php $postid = get_the_ID(); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
 								<li class="col-sm-3 mix ">
 									<a class="popup-modal" href="#<?php echo $postid; ?>">
 										<figure>
-											<?php the_post_thumbnail('thumbnail'); ?>
+											<img src="<?php echo $image[0]; ?>" alt="">
 											<figcaption>
 											</figcaption>
 										</figure>
@@ -63,7 +64,7 @@ get_header();
 										</header>
 										<section style="overflow: hidden;">
 											<figure class="col-md-6" style="overflow:hidden">
-												<?php the_post_thumbnail('thumbnail'); ?>
+												<img style="width:100%" src="<?php echo $image[0]; ?>">
 											</figure>
 											<article class="col-md-6">
 												<p><?php the_content(); ?></p>
