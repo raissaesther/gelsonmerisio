@@ -10,8 +10,6 @@ $id = $wp_query->get_queried_object_id();
 get_header();
 ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
 
 	<?php if(get_post_meta($id, "qode_page_scroll_amount_for_sticky", true)) { ?>
 		<script>
@@ -23,9 +21,7 @@ get_header();
 
 	<?php the_content(); ?>
 
-<?php endwhile; wp_reset_query(); //resetting the page query
- ?>
-<?php endif; ?>
+
 
 <div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
 	<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
@@ -46,7 +42,13 @@ get_header();
 				<article class="products-list">
 					<ul id="prod-container">
 						<?php
-						if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+$query = new WP_Query( array(
+    // your arguments here
+) );
+
+while ( $query->have_posts() ) {
+    $query->the_post(); ?>
+
 						<?php $postid = get_the_ID(); ?>
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 						<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
