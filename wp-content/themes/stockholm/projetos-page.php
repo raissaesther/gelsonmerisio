@@ -41,9 +41,7 @@ get_header();
 
 					<article class="products-list">
 						<ul id="prod-container">
-							<?php   $args = array( 'category_name' => 'todos');
-							$loop = new WP_Query( $args ); ?>
-							<?php  while ( $loop->have_posts() ) : $loop->the_post(); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								<?php $postid = get_the_ID(); ?>
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 								<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
