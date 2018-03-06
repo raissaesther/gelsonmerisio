@@ -44,7 +44,7 @@ get_header();
 				</nav>
 
 				<article class="products-list">
-					<ul id="prod-container">
+					<div id="prod-container">
 						<?php
 						$post = array(
 							'post_type' => 'post',
@@ -59,7 +59,7 @@ get_header();
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 							<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
-							<li class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
+							<div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
 								<a class="popup-modal" href="#<?php echo $postid; ?>">
 									<figure>
 										<img src="<?php echo $image[0]; ?>" alt="">
@@ -83,12 +83,12 @@ get_header();
 										</article>
 									</section>
 								</div>
-							</li>
+							</div>
 						<?php endwhile; // end of the loop. ?>
 						<?php wp_reset_postdata();?>
 
 
-					</ul>
+					</div>
 				</article>
 			</section>
 		</section>
