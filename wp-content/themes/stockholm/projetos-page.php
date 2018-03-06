@@ -46,10 +46,10 @@ get_header();
 							<?php  while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<?php $postid = get_the_ID(); ?>
 
-								<li class="col-sm-3 mix <?php the_field('tipo'); ?>">
+								<li class="col-sm-3 mix ">
 									<a class="popup-modal" href="#<?php echo $postid; ?>">
 										<figure>
-											<img src="<?php the_field('foto'); ?>" alt="<?php the_field('nome'); ?>">
+											<img src="" alt="">
 											<figcaption>
 											</figcaption>
 										</figure>
@@ -59,23 +59,19 @@ get_header();
 									<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
 										<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
 										<header style="text-align: center;text-transform: uppercase;">
-											<h1><?php the_field('nome'); ?></h1>
+											<h1><?php the_title(); ?></h1>
 										</header>
 										<section style="overflow: hidden;">
 											<figure class="col-md-6" style="overflow:hidden">
-												<img style="width:100%" src="<?php the_field('foto'); ?>">
+												<img style="width:100%" src="">
 											</figure>
 											<article class="col-md-6">
-												<p><?php the_field('descricao'); ?></p>
+												<p></p>
 												<ul class="col-xs-6" style=" text-align: left;padding-left: 0;">
-													<li><?php the_field('tamanho_p'); ?></li>
-													<li><?php the_field('tamanho_m'); ?></li>
-													<li><?php the_field('tamanho_g'); ?></li>
+
 												</ul>
 												<ul class="col-xs-6" style="text-align: right;">
-													<li><b><?php the_field('preco_p'); ?></b></li>
-													<li><br><b><?php the_field('preço_m'); ?></b></li>
-													<li><br><b><?php the_field('preco_g_'); ?></b></li>
+
 												</ul>
 											</article>
 										</section>
