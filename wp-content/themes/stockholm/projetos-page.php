@@ -36,10 +36,14 @@ get_header();
 				<nav class="products-nav">
 					<ul>
 						<li class="filter" data-filter="all"><a href="#"><h3>Todos</h3></a></li>
-						<li class="filter" data-filter=".noticias"><a href="#"><h3>Notícias</h3></a></li>
-						<li class="filter" data-filter=".artigos"><a href="#"><h3>Artigos</h3></a></li>
-						<li class="filter" data-filter=".projetos"><a href="#"><h3>Projetos</h3></a></li>
-						<li class="filter" data-filter=".realizacoes"><a href="#"><h3>Realizações</h3></a></li>
+						<li class="filter" data-filter=".educacao"><a href="#"><h3>Educaçao</h3></a></li>
+						<li class="filter" data-filter=".meio-ambiente"><a href="#"><h3>Meio ambiente</h3></a></li>
+						<li class="filter" data-filter=".saude"><a href="#"><h3>Saúde</h3></a></li>
+						<li class="filter" data-filter=".seguranca"><a href="#"><h3>Segurança</h3></a></li>
+						<li class="filter" data-filter=".social"><a href="#"><h3>Social</h3></a></li>
+						<li class="filter" data-filter=".gestao-e-inovacao"><a href="#"><h3>Gestao e inovação</h3></a></li>
+						<li class="filter" data-filter=".transparencia"><a href="#"><h3>Transparencia</h3></a></li>
+						<li class="filter" data-filter=".agronegocio"><a href="#"><h3>Agronegócio</h3></a></li>
 					</ul>
 				</nav>
 
