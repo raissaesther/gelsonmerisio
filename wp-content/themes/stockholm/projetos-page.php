@@ -47,7 +47,7 @@ get_header();
 								<?php $postid = get_the_ID(); ?>
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-								<li class="col-sm-3 mix ">
+								<li class="col-sm-3 mix <?php echo $term->name; ?> <?php $term = get_term( 1, 'taxonomy_slug' ); ?>">
 									<a class="popup-modal" href="#<?php echo $postid; ?>">
 										<figure>
 											<img src="<?php echo $image[0]; ?>" alt="">
