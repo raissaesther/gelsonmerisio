@@ -10,7 +10,7 @@ $id = $wp_query->get_queried_object_id();
 get_header();
 ?>
 
-
+<?php while ( have_posts() ) : the_post(); ?>
 	<?php if(get_post_meta($id, "qode_page_scroll_amount_for_sticky", true)) { ?>
 		<script>
 		var page_scroll_amount_for_sticky = <?php echo get_post_meta($id, "qode_page_scroll_amount_for_sticky", true); ?>;
@@ -20,6 +20,8 @@ get_header();
 	<?php get_template_part( 'title' ); ?>
 
 	<?php the_content(); ?>
+
+<?php endwhile; // end of the loop. ?>
 
 
 
@@ -42,12 +44,14 @@ get_header();
 				<article class="products-list">
 					<ul id="prod-container">
 						<?php
-$query = new WP_Query( array(
-    // your arguments here
-) );
+						    $post = array(
+						    'post_type' => 'post',
+						    'order' => 'ASC',
+						    'post_status' => 'publish'
+						);
+						$loop = new WP_Query( $post ); ?>
 
-while ( $query->have_posts() ) {
-    $query->the_post(); ?>
+						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 						<?php $postid = get_the_ID(); ?>
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -78,8 +82,10 @@ while ( $query->have_posts() ) {
 								</section>
 							</div>
 						</li>
+					<?php endwhile; // end of the loop. ?>
+			    <?php wp_reset_postdata();?>
 
-					<?php wp_reset_postdata(); ?>
+
 				</ul>
 			</article>
 		</section>
