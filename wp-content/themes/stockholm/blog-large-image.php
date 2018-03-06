@@ -1,10 +1,10 @@
-<?php 
+<?php
 /*
 Template Name: Blog Large Image
-*/ 
+*/
 ?>
 <?php get_header(); ?>
-<?php 
+<?php
 global $wp_query;
 global $qode_template_name;
 $id = $wp_query->get_queried_object_id();
@@ -18,7 +18,7 @@ $page_object = get_post( $id );
 $q_content = $page_object->post_content;
 $q_content = apply_filters( 'the_content', $q_content );
 
-$sidebar = get_post_meta($id, "qode_show-sidebar", true); 
+$sidebar = get_post_meta($id, "qode_show-sidebar", true);
 
 if(get_post_meta($id, "qode_page_background_color", true) != ""){
 	$background_color = get_post_meta($id, "qode_page_background_color", true);
@@ -46,7 +46,7 @@ if($qode_options['number_of_chars_large_image'] != "") {
 			</script>
 		<?php } ?>
 			<?php get_template_part( 'title' ); ?>
-	
+
 	<?php
 		$revslider = get_post_meta($id, "qode_revolution-slider", true);
 		if (!empty($revslider)){ ?>
@@ -56,7 +56,7 @@ if($qode_options['number_of_chars_large_image'] != "") {
 		<?php
 		}
 		?>
-	<?php 
+	<?php
 		query_posts('post_type=post&paged='. $paged . '&cat=' . $category .'&posts_per_page=' . $post_number );
 	?>
 	<div class="container"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
@@ -65,32 +65,33 @@ if($qode_options['number_of_chars_large_image'] != "") {
 						<?php
 							print $q_content;
 							get_template_part('templates/blog/blog', 'structure');
-						?>			
+						?>
 				<?php elseif($sidebar == "1" || $sidebar == "2"): ?>
 					<div class="<?php if($sidebar == "1"):?>two_columns_66_33<?php elseif($sidebar == "2") : ?>two_columns_75_25<?php endif; ?> background_color_sidebar grid2 clearfix">
-						<div class="column1">
+						<div class="column1">TEste
+
 							<div class="column_inner">
 								<?php
 									print $q_content;
 									get_template_part('templates/blog/blog', 'structure');
-								?>				
+								?>
 							</div>
 						</div>
 						<div class="column2">
-							<?php get_sidebar(); ?>	
+							<?php get_sidebar(); ?>
 						</div>
 					</div>
 				<?php elseif($sidebar == "3" || $sidebar == "4"): ?>
 						<div class="<?php if($sidebar == "3"):?>two_columns_33_66<?php elseif($sidebar == "4") : ?>two_columns_25_75<?php endif; ?> background_color_sidebar grid2 clearfix">
 							<div class="column1">
-								<?php get_sidebar(); ?>	
+								<?php get_sidebar(); ?>
 							</div>
 							<div class="column2">
 								<div class="column_inner">
 									<?php
 										print $q_content;
 										get_template_part('templates/blog/blog', 'structure');
-									?>			
+									?>
 								</div>
 							</div>
 						</div>
