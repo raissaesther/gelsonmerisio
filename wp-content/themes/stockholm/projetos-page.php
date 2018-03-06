@@ -49,7 +49,7 @@ get_header();
 								<li class="col-sm-3 mix ">
 									<a class="popup-modal" href="#<?php echo $postid; ?>">
 										<figure>
-											<?php the_thumbnail(); ?>
+											<?php the_post_thumbnail('thumbnail'); ?>
 											<figcaption>
 											</figcaption>
 										</figure>
@@ -63,7 +63,7 @@ get_header();
 										</header>
 										<section style="overflow: hidden;">
 											<figure class="col-md-6" style="overflow:hidden">
-												<?php the_thumbnail(); ?>
+												<?php the_post_thumbnail('thumbnail'); ?>
 											</figure>
 											<article class="col-md-6">
 												<p><?php the_content(); ?></p>
