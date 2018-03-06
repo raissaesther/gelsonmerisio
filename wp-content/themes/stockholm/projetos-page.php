@@ -79,7 +79,7 @@ while ( $query->have_posts() ) {
 							</div>
 						</li>
 
-					<?php  endwhile; wp_reset_postdata(); ?>
+					<?php wp_reset_postdata(); ?>
 				</ul>
 			</article>
 		</section>
