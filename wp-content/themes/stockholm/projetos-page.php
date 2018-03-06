@@ -19,14 +19,16 @@ get_header();
 
 	<?php get_template_part( 'title' ); ?>
 
-	<?php the_content(); ?>
-
-<?php endwhile; // end of the loop. ?>
 
 
 
-<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
-	<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
+	<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
+
+		<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
+			<?php the_content(); ?>
+
+		<?php endwhile; // end of the loop. ?>
+
 		<div class="projeto-e-ideias">
 			<!-- Products list -->
 			<section class="container">
@@ -44,53 +46,53 @@ get_header();
 				<article class="products-list">
 					<ul id="prod-container">
 						<?php
-						    $post = array(
-						    'post_type' => 'post',
-						    'order' => 'ASC',
-						    'post_status' => 'publish'
+						$post = array(
+							'post_type' => 'post',
+							'order' => 'ASC',
+							'post_status' => 'publish'
 						);
 						$loop = new WP_Query( $post ); ?>
 
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-						<?php $postid = get_the_ID(); ?>
-						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-						<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
+							<?php $postid = get_the_ID(); ?>
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+							<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
-						<li class="col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
-							<a class="popup-modal" href="#<?php echo $postid; ?>">
-								<figure>
-									<img src="<?php echo $image[0]; ?>" alt="">
-									<figcaption>
-									</figcaption>
-								</figure>
-								<h3><?php the_title(); ?></h3>
-							</a>
-
-							<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
-								<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
-								<header style="text-align: center;text-transform: uppercase;">
-									<h1><?php the_title(); ?></h1>
-								</header>
-								<section style="overflow: hidden;">
-									<figure class="col-md-6" style="overflow:hidden">
-										<img style="width:100%" src="<?php echo $image[0]; ?>">
+							<li class="col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
+								<a class="popup-modal" href="#<?php echo $postid; ?>">
+									<figure>
+										<img src="<?php echo $image[0]; ?>" alt="">
+										<figcaption>
+										</figcaption>
 									</figure>
-									<article class="col-md-6">
-										<p><?php the_content(); ?></p>
-									</article>
-								</section>
-							</div>
-						</li>
-					<?php endwhile; // end of the loop. ?>
-			    <?php wp_reset_postdata();?>
+									<h3><?php the_title(); ?></h3>
+								</a>
+
+								<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+									<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
+									<header style="text-align: center;text-transform: uppercase;">
+										<h1><?php the_title(); ?></h1>
+									</header>
+									<section style="overflow: hidden;">
+										<figure class="col-md-6" style="overflow:hidden">
+											<img style="width:100%" src="<?php echo $image[0]; ?>">
+										</figure>
+										<article class="col-md-6">
+											<p><?php the_content(); ?></p>
+										</article>
+									</section>
+								</div>
+							</li>
+						<?php endwhile; // end of the loop. ?>
+						<?php wp_reset_postdata();?>
 
 
-				</ul>
-			</article>
+					</ul>
+				</article>
+			</section>
 		</section>
-	</section>
-</div>
+	</div>
 </div>
 </div>
 
