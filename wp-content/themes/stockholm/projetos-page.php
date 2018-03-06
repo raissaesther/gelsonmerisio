@@ -53,7 +53,7 @@ get_header();
 											<figcaption>
 											</figcaption>
 										</figure>
-										<h3><?php the_field('nome'); ?></h3>
+										<h3><?php the_title(); ?></h3>
 									</a>
 
 									<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
