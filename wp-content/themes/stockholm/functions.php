@@ -52,6 +52,7 @@ if (!function_exists('qode_styles')) {
 		//include theme's core styles
 		wp_enqueue_style("qode_default_style", QODE_ROOT . "/style.css");
 		wp_enqueue_style("qode_stylesheet", QODE_ROOT . "/css/stylesheet.min.css");
+		wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css' );
 
 		//define files afer which style dynamic needs to be included. It should be included last so it can override other files
 		$style_dynamic_deps_array = array();
@@ -86,7 +87,7 @@ if (!function_exists('qode_styles')) {
 		if ($responsiveness != "no") {
 			//include proper styles
 			wp_enqueue_style("qode_responsive", QODE_ROOT . "/css/responsive.min.css");
-			
+
 			if (file_exists(dirname(__FILE__) ."/css/style_dynamic_responsive.css") && qode_is_css_folder_writable() && !is_multisite()){
             	wp_enqueue_style("qode_style_dynamic_responsive", QODE_ROOT . "/css/style_dynamic_responsive.css", array(), filemtime(dirname(__FILE__) ."/css/style_dynamic_responsive.css"));
 			} else {
@@ -379,8 +380,9 @@ if (!function_exists('qode_scripts')) {
 			$smooth_scroll = false;
 		}
 
-		//init theme core scripts
+		//init theme core
 		wp_enqueue_script("jquery");
+		wp_enqueue_script("bootstrap_j", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js");
 		wp_enqueue_script("wp-mediaelement");
 		wp_enqueue_script("qode_plugins", QODE_ROOT."/js/plugins.js",array(),false,true);
 		wp_enqueue_script("carouFredSel", QODE_ROOT."/js/plugins/jquery.carouFredSel-6.2.1.js",array(),false,true);
@@ -421,7 +423,7 @@ if (!function_exists('qode_scripts')) {
 			//include smooth scroll script
 			wp_enqueue_script("smoothScroll", QODE_ROOT."/js/plugins/SmoothScroll.js",array(),false,true);
 		}
-		
+
 		//include comment reply script
 		$wp_scripts->add_data('comment-reply', 'group', 1);
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -1079,7 +1081,7 @@ if(!function_exists('qode_get_page_id')) {
 	 * @see qode_is_woocommerce_shop()
 	 */
 	function qode_get_page_id() {
-		if(qode_is_woocommerce_installed() && (qode_is_woocommerce_shop() || is_singular('product'))) {	
+		if(qode_is_woocommerce_installed() && (qode_is_woocommerce_shop() || is_singular('product'))) {
 			return qode_get_woo_shop_page_id();
 		}
 
@@ -1278,7 +1280,7 @@ if (!function_exists('qode_gallery_upload_get_images')){
 			$image = wp_get_attachment_image_src($id,'thumbnail', true);
 			echo '<li class="qode-gallery-image-holder"><img src="'.$image[0].'"/></li>';
 		endforeach;
-		exit;  
+		exit;
 	}
 }
 
