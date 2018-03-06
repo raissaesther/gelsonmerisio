@@ -21,24 +21,78 @@ get_header();
 
 	<?php get_template_part( 'title' ); ?>
 
-TESTE
+
 
 	<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
 		<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
-			<div class="contact_info">
-				<?php the_content(); ?>
-			</div>
+			<div class="projeto-e-ideias">
+				<!-- Products list -->
+				<section class="container">
+
+					<nav class="products-nav">
+						<ul>
+							<li class="filter" data-filter="all"><a href="#"><h3>Todos</h3></a></li>
+							<li class="filter" data-filter=".noticias"><a href="#"><h3>Notícias</h3></a></li>
+							<li class="filter" data-filter=".artigos"><a href="#"><h3>Artigos</h3></a></li>
+							<li class="filter" data-filter=".projetos"><a href="#"><h3>Projetos</h3></a></li>
+							<li class="filter" data-filter=".realizacoes"><a href="#"><h3>Realizações</h3></a></li>
+						</ul>
+					</nav>
+
+					<article class="products-list">
+						<ul id="prod-container">
+							<?php   $args = array( 'post_type' => 'produto');
+							$loop = new WP_Query( $args ); ?>
+							<?php  while ( $loop->have_posts() ) : $loop->the_post(); ?>
+								<?php $postid = get_the_ID(); ?>
+
+								<li class="col-sm-3 mix <?php the_field('tipo'); ?>">
+									<a class="popup-modal" href="#<?php echo $postid; ?>">
+										<figure>
+											<img src="<?php the_field('foto'); ?>" alt="<?php the_field('nome'); ?>">
+											<figcaption>
+											</figcaption>
+										</figure>
+										<h3><?php the_field('nome'); ?></h3>
+									</a>
+
+									<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+										<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
+										<header style="text-align: center;text-transform: uppercase;">
+											<h1><?php the_field('nome'); ?></h1>
+										</header>
+										<section style="overflow: hidden;">
+											<figure class="col-md-6" style="overflow:hidden">
+												<img style="width:100%" src="<?php the_field('foto'); ?>">
+											</figure>
+											<article class="col-md-6">
+												<p><?php the_field('descricao'); ?></p>
+												<ul class="col-xs-6" style=" text-align: left;padding-left: 0;">
+													<li><?php the_field('tamanho_p'); ?></li>
+													<li><?php the_field('tamanho_m'); ?></li>
+													<li><?php the_field('tamanho_g'); ?></li>
+												</ul>
+												<ul class="col-xs-6" style="text-align: right;">
+													<li><b><?php the_field('preco_p'); ?></b></li>
+													<li><br><b><?php the_field('preço_m'); ?></b></li>
+													<li><br><b><?php the_field('preco_g_'); ?></b></li>
+												</ul>
+											</article>
+										</section>
+									</div>
+								</li>
+
+							<?php  endwhile; wp_reset_postdata(); ?>
+						</ul>
+					</article>
+				</section>
+			</section>
+			<?php the_content(); ?>
+
 		</div>
 	</div>
-	<?php if($show_section == "yes" || $qode_options['enable_contact_form'] == "yes") { ?>
-		<div class="container"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
-			<div class="container_inner<?php echo esc_attr($container_class); ?> clearfix q_contact_page default_template_holder">
+</div>
 
-				<!-- Contact form right/left -->
-
-			</div>
-		</div>
-	<?php } ?>
 
 <?php endwhile; ?>
 <?php endif; ?>
