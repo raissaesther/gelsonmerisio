@@ -383,7 +383,7 @@ if (!function_exists('qode_scripts')) {
 
 		//init theme core
 		wp_enqueue_script("jquery");
-		wp_enqueue_script("bootstrap_js", QODE_ROOT."/css/bootstrap-3/js/mixitup.min.js",array(),false,true);
+		wp_enqueue_script("bootstrap_js", QODE_ROOT."/css/bootstrap-3/js/bootstrap.min.js",array(),false,true);
 		wp_enqueue_script("wp-mediaelement");
 		wp_enqueue_script("mixitup", QODE_ROOT."/js/mixitup.min.js",array(),false,true);
 		wp_enqueue_script("qode_plugins", QODE_ROOT."/js/plugins.js",array(),false,true);
