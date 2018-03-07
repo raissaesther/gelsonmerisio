@@ -91,19 +91,7 @@ get_header();
   </div>
 </div>
 
-								<!-- <div id="<?php echo $postid; ?>" class="modal fade">
-									<header style="text-align: center;text-transform: uppercase;">
-										<h1><?php the_title(); ?></h1>
-									</header>
-									<section style="overflow: hidden;">
-										<figure class="col-md-6" style="overflow:hidden">
-											<img style="width:100%" src="<?php echo $image[0]; ?>">
-										</figure>
-										<article class="col-md-6">
-											<p><?php the_content(); ?></p>
-										</article>
-									</section>
-								</div> -->
+								
 								</div>
 							</div>
 						<?php endwhile; // end of the loop. ?>
