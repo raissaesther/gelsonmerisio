@@ -52,7 +52,7 @@ if (!function_exists('qode_styles')) {
 		//include theme's core styles
 		wp_enqueue_style("qode_default_style", QODE_ROOT . "/style.css");
 		wp_enqueue_style("qode_stylesheet", QODE_ROOT . "/css/stylesheet.min.css");
-		wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css' );
+		wp_enqueue_style("bootstrap_css", QODE_ROOT . "/css/bootstrap-theme.min.css");
 
 		//define files afer which style dynamic needs to be included. It should be included last so it can override other files
 		$style_dynamic_deps_array = array();
