@@ -54,7 +54,7 @@ get_header();
 							'post_type' => 'post',
 							'order' => 'ASC',
 							'post_status' => 'publish',
-							'posts_per_page' => -1 	
+							'posts_per_page' => -1
 						);
 						$loop = new WP_Query( $post ); ?>
 
@@ -74,7 +74,7 @@ get_header();
 									<h3><?php the_title(); ?></h3>
 								</a>
 
-								<div id="<?php echo $postid; ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+								<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
 									<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
 									<header style="text-align: center;text-transform: uppercase;">
 										<h1><?php the_title(); ?></h1>
