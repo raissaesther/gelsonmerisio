@@ -144,82 +144,15 @@ get_header();
 
 				</article>
 			</section>
+		</div>
+
 	</div>
-</div>
 </div>
 
 
 
 <script type="text/javascript">
-jQuery(document).ready(function($){
-	$j('form#contact-form').submit(function(){
-		$j('form#contact-form .contact-error').remove();
-		var hasError = false;
-		$j('form#contact-form .requiredField').each(function() {
-			if(jQuery.trim($j(this).val()) == '' || jQuery.trim($j(this).val()) == jQuery.trim($j(this).attr('placeholder'))){
-				var labelText = $j(this).prev('label').text();
-				$j(this).parent().append("<strong class='contact-error'><?php _e('This is a required field', 'qode'); ?></strong>");
-				$j(this).addClass('inputError');
-				hasError = true;
-			} else { //else 1
-				if($j(this).hasClass('email')) { //if hasClass('email')
-				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-				if(!emailReg.test(jQuery.trim($j(this).val()))){
-					var labelText = $j(this).prev('label').text();
-					$j(this).parent().append("<strong class='contact-error'><?php _e('Please enter a valid email address.', 'qode'); ?></strong>");
-					$j(this).addClass('inputError');
-					hasError = true;
-				}
-			} //end of if hasClass('email')
 
-		} // end of else 1
-	}); //end of each()
-
-	if(!hasError){
-		challengeField = $j("input#recaptcha_challenge_field").val();
-		responseField = $j("input#recaptcha_response_field").val();
-		name =  $j("input#fname").val();
-		lastname =  $j("input#lname").val();
-		email =  $j("input#email").val();
-		website =  $j("input#website").val();
-		message =  $j("textarea#message").val();
-
-		var form_post_data = "";
-
-		var html = $j.ajax({
-			type: "POST",
-			url: "<?php echo QODE_ROOT; ?>/includes/ajax_mail.php",
-			data: "recaptcha_challenge_field=" + challengeField + "&recaptcha_response_field=" + responseField + "&name=" + name + "&lastname=" + lastname + "&email=" + email + "&website=" + website + "&message=" + message,
-			async: false
-		}).responseText;
-
-		if(html == "success"){
-			var formInput = $j(this).serialize();
-
-			$j("form#contact-form").before("<div class='contact-success'><strong><?php _e('THANK YOU!', 'qode'); ?></strong><p><?php _e('Your email was successfully sent. We will contact you as soon as possible.', 'qode'); ?></p></div>");
-			$j("form#contact-form").hide();
-			$j.post($j(this).attr('action'),formInput);
-			hasError = false;
-			return false;
-		} else {
-			<?php
-			if ($qode_options['use_recaptcha'] == "yes"){
-				?>
-				$j("#recaptcha_response_field").parent().append("<span class='contact-error extra-padding'><?php _e('Invalid Captcha', 'qode'); ?></span>");
-				Recaptcha.reload();
-				<?php
-			} else {
-				?>
-				$j("form#contact-form").before("<div class='contact-success'><strong><?php _e('Email server problem', 'qode'); ?></strong></p></div>");
-				<?php
-			}
-			?>
-			return false;
-		}
-	}
-	return false;
-});
-});
 </script>
 
 <?php get_footer(); ?>
