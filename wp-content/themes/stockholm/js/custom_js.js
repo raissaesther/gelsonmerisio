@@ -11,7 +11,6 @@ $j(document).ready(function() {
 
 	var mixer = mixitup('#prod-container');
 
-	$j(function () {
 
 		$j('.popup-modal').magnificPopup({
 			type: 'inline',
@@ -29,6 +28,6 @@ $j(document).ready(function() {
 			$j.magnificPopup.close();
 		});
 
-	});
+
 
 	});
