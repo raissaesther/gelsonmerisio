@@ -65,7 +65,7 @@ get_header();
 							<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
 							<div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
-								<a data-toggle="modal" data-target="#<?php echo $postid; ?>" href="">
+								<a class="popup-modal" href="#<?php echo $postid; ?>">
 									<figure>
 										<img src="<?php echo $image[0]; ?>" alt="">
 										<figcaption>
