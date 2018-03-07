@@ -384,6 +384,7 @@ if (!function_exists('qode_scripts')) {
 		wp_enqueue_script("jquery");
 		wp_enqueue_script("bootstrap_j", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js");
 		wp_enqueue_script("wp-mediaelement");
+		wp_enqueue_script("mixitup", QODE_ROOT."/js/mixitup.min.js",array(),false,true);
 		wp_enqueue_script("qode_plugins", QODE_ROOT."/js/plugins.js",array(),false,true);
 		wp_enqueue_script("carouFredSel", QODE_ROOT."/js/plugins/jquery.carouFredSel-6.2.1.js",array(),false,true);
 		wp_enqueue_script("one_page_scroll", QODE_ROOT."/js/plugins/jquery.fullPage.min.js",array(),false,true);
