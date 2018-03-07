@@ -35,7 +35,7 @@ get_header();
 
 				<nav class="products-nav">
 					<ul style="list-style: none;">
-						<li class="filter" data-filter="all">
+						<li class="filter" data-filter=".todos">
 							<a class="temas" href="#">
 								<span class="icon">
 									<img class="alignnone size-medium wp-image-227"
