@@ -71,7 +71,6 @@ if (!function_exists('qode_styles')) {
 
 		//include magnific
 		wp_enqueue_style("qode_font-awesome", QODE_ROOT . "/magnific/magnific-popup.css");
-		// wp_enqueue_style("bootstrap_css", QODE_ROOT . "/css/bootstrap-3/css/bootstrap.min.css");
 
 		//include elegant font styles
 		wp_enqueue_style("qode_elegant-icons", QODE_ROOT . "/css/elegant-icons/style.min.css");
@@ -386,9 +385,8 @@ if (!function_exists('qode_scripts')) {
 
 		//init theme core
 		wp_enqueue_script("jquery");
-		// wp_enqueue_script("bootstrap_js", QODE_ROOT."/css/bootstrap-3/js/bootstrap.min.js",array(),false,true);
 		wp_enqueue_script("wp-mediaelement");
-		wp_enqueue_script("mixitup", QODE_ROOT."/js/mixitup.min.js",array(),false,true);
+
 		wp_enqueue_script("qode_plugins", QODE_ROOT."/js/plugins.js",array(),false,true);
 		wp_enqueue_script("carouFredSel", QODE_ROOT."/js/plugins/jquery.carouFredSel-6.2.1.js",array(),false,true);
 		wp_enqueue_script("one_page_scroll", QODE_ROOT."/js/plugins/jquery.fullPage.min.js",array(),false,true);
@@ -397,6 +395,7 @@ if (!function_exists('qode_scripts')) {
 		wp_enqueue_script("touchSwipe", QODE_ROOT."/js/plugins/jquery.touchSwipe.min.js",array(),false,true);
 		wp_enqueue_script("isotope", QODE_ROOT."/js/plugins/jquery.isotope.min.js",array(),false,true);
 		wp_enqueue_script("parallax-scroll", QODE_ROOT."/js/plugins/jquery.parallax-scroll.js",array(),false,true);
+		wp_enqueue_script("mixitup", QODE_ROOT."/js/mixitup.min.js",array(),false,true);
 		wp_enqueue_script("magnific_js", QODE_ROOT."/magnific/jquery.magnific-popup.js",array(),false,true);
 
 		//is google map enabled on contact page template?
