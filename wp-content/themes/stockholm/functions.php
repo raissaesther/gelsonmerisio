@@ -68,6 +68,9 @@ if (!function_exists('qode_styles')) {
 
 		//include font-awesome styles
 		wp_enqueue_style("qode_font-awesome", QODE_ROOT . "/css/font-awesome/css/font-awesome.min.css");
+
+		//include magnific
+		wp_enqueue_style("qode_font-awesome", QODE_ROOT . "/magnific/magnific-popup.css");
 		// wp_enqueue_style("bootstrap_css", QODE_ROOT . "/css/bootstrap-3/css/bootstrap.min.css");
 
 		//include elegant font styles
@@ -394,6 +397,7 @@ if (!function_exists('qode_scripts')) {
 		wp_enqueue_script("touchSwipe", QODE_ROOT."/js/plugins/jquery.touchSwipe.min.js",array(),false,true);
 		wp_enqueue_script("isotope", QODE_ROOT."/js/plugins/jquery.isotope.min.js",array(),false,true);
 		wp_enqueue_script("parallax-scroll", QODE_ROOT."/js/plugins/jquery.parallax-scroll.js",array(),false,true);
+		wp_enqueue_script("magnific_js", QODE_ROOT."/magnific/jquery.magnific-popup.js",array(),false,true);
 
 		//is google map enabled on contact page template?
 		if($qode_options['enable_google_map'] == "yes" || qode_is_ajax_enabled() || qode_has_google_map_shortcode()) {
