@@ -34,7 +34,7 @@ get_header();
 			<section class="container">
 
 				<nav class="products-nav">
-					<ul>
+					<ul style="list-style: none;">
 						<li class="filter" data-filter="all">
 							<a class="temas" href="#">
 								<span class="icon">
