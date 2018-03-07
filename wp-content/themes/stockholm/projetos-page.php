@@ -74,7 +74,24 @@ get_header();
 									<h3><?php the_title(); ?></h3>
 								</a>
 
-								<div id="<?php echo $postid; ?>" class="modal fade">
+								<div class="modal fade" id="<?php echo $postid; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><?php the_title(); ?></h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+								<!-- <div id="<?php echo $postid; ?>" class="modal fade">
 									<header style="text-align: center;text-transform: uppercase;">
 										<h1><?php the_title(); ?></h1>
 									</header>
@@ -86,7 +103,7 @@ get_header();
 											<p><?php the_content(); ?></p>
 										</article>
 									</section>
-								</div>
+								</div> -->
 								</div>
 							</div>
 						<?php endwhile; // end of the loop. ?>
