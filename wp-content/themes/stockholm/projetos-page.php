@@ -74,7 +74,27 @@ get_header();
 									<h3><?php the_title(); ?></h3>
 								</a>
 
-								<div id="<?php echo $postid; ?>" class="modal fade" tabindex="-1" role="dialog">
+								<div class="modal fade" id="<?php echo $postid; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title" id="myModalLabel"><?php the_title(); ?></h4>
+								      </div>
+								      <div class="modal-body">
+												<figure class="col-md-6" style="overflow:hidden">
+													<img style="width:100%" src="<?php echo $image[0]; ?>">
+												</figure>
+												<article class="col-md-6">
+													<p><?php the_content(); ?></p>
+												</article>
+								      </div>
+
+								    </div>
+								  </div>
+								</div>
+
+								<!-- <div id="<?php echo $postid; ?>" class="modal fade" tabindex="-1" role="dialog">
 									<button title="Close (Esc)" type="button">×</button>
 									<header>
 										<h1><?php the_title(); ?></h1>
@@ -87,7 +107,7 @@ get_header();
 											<p><?php the_content(); ?></p>
 										</article>
 									</section>
-								</div>
+								</div> -->
 							</div>
 						<?php endwhile; // end of the loop. ?>
 						<?php wp_reset_postdata();?>
