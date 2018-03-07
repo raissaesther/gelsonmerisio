@@ -64,7 +64,7 @@ get_header();
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 							<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
-							<div class="col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
+							<div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
 								<a data-toggle="modal" data-target="#<?php echo $postid; ?>" href="">
 									<figure>
 										<img src="<?php echo $image[0]; ?>" alt="">
