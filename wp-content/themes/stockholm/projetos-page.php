@@ -114,26 +114,28 @@ get_header();
 							<div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
 
 
-								<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
-									<header style="text-align: center;text-transform: uppercase;">
-										<h1><?php the_title(); ?></h1>
-									</header>
-									<section style="overflow: hidden;">
-										<figure class="vc_col-md-6" style="overflow:hidden">
-											<img style="width:100%" src="<?php echo $image[0]; ?>">
-										</figure>
-										<article class="vc_col-md-6">
-											<p><?php the_content(); ?></p>
-										</article>
-									</section>
-								</div>
-
 								<a class="box open-popup-link" href="#<?php echo $postid; ?>">
 									<figure>
 										<img src="<?php echo $image[0]; ?>" alt="">
 									</figure>
 									<h3><?php the_title(); ?></h3>
 								</a>
+
+
+																<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+																	<header style="text-align: center;text-transform: uppercase;">
+																		<h1><?php the_title(); ?></h1>
+																	</header>
+																	<section style="overflow: hidden;">
+																		<figure class="vc_col-md-6" style="overflow:hidden">
+																			<img style="width:100%" src="<?php echo $image[0]; ?>">
+																		</figure>
+																		<article class="vc_col-md-6">
+																			<p><?php the_content(); ?></p>
+																		</article>
+																	</section>
+																</div>
+
 
 							</div>
 
