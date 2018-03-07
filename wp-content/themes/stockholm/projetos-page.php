@@ -41,7 +41,7 @@ get_header();
 						<li class="filter" data-filter=".saude"><a href="#"><h3>Saúde</h3></a></li>
 						<li class="filter" data-filter=".seguranca"><a href="#"><h3>Segurança</h3></a></li>
 						<li class="filter" data-filter=".social"><a href="#"><h3>Social</h3></a></li>
-						<li class="filter" data-filter=".gestao-e-inovacao"><a href="#"><h3>Gestao e inovação</h3></a></li>
+						<li class="filter" data-filter=".gestao-inovacao"><a href="#"><h3>Gestao e inovação</h3></a></li>
 						<li class="filter" data-filter=".transparencia"><a href="#"><h3>Transparencia</h3></a></li>
 						<li class="filter" data-filter=".agronegocio"><a href="#"><h3>Agronegócio</h3></a></li>
 					</ul>
@@ -53,7 +53,8 @@ get_header();
 						$post = array(
 							'post_type' => 'post',
 							'order' => 'ASC',
-							'post_status' => 'publish'
+							'post_status' => 'publish',
+							'posts_per_page' => -1 
 						);
 						$loop = new WP_Query( $post ); ?>
 
@@ -63,7 +64,7 @@ get_header();
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 							<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
-							<div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
+							<div class="col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
 								<a data-toggle="modal" data-target="#<?php echo $postid; ?>" href="">
 									<figure>
 										<img src="<?php echo $image[0]; ?>" alt="">
