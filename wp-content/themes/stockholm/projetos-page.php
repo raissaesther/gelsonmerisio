@@ -35,15 +35,54 @@ get_header();
 
 				<nav class="products-nav">
 					<ul>
-						<li class="filter" data-filter="all"><a href="#"><h3>Todos</h3></a></li>
-						<li class="filter" data-filter=".educacao"><a href="#"><h3>Educaçao</h3></a></li>
-						<li class="filter" data-filter=".meio-ambiente"><a href="#"><h3>Meio ambiente</h3></a></li>
-						<li class="filter" data-filter=".saude"><a href="#"><h3>Saúde</h3></a></li>
-						<li class="filter" data-filter=".seguranca"><a href="#"><h3>Segurança</h3></a></li>
-						<li class="filter" data-filter=".social"><a href="#"><h3>Social</h3></a></li>
-						<li class="filter" data-filter=".gestao-inovacao"><a href="#"><h3>Gestao e inovação</h3></a></li>
-						<li class="filter" data-filter=".transparencia"><a href="#"><h3>Transparencia</h3></a></li>
-						<li class="filter" data-filter=".agronegocio"><a href="#"><h3>Agronegócio</h3></a></li>
+						<li class="filter" data-filter="all">
+							<a class="temas" href="#">
+								<span class="icon">
+									<img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150">
+								</span>
+								<h3>TODOS</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".educacao">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>EDUCAÇÃO</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".meio-ambiente">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>MEIO AMBIENTE</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".saude">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>SAÚDE</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".seguranca">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>SEGURANÇA</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".social">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>SOCIAL</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".gestao-inovacao">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>GESTÃO E INOVAÇÃO</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".transparencia">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>TRANSPARÊNCIA</h3>
+							</a>
+						</li>
+						<li class="filter" data-filter=".agronegocio">
+							<a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+								<h3>AGRONEGÓCIO</h3>
+							</a>
+						</li>
 					</ul>
 				</nav>
 
