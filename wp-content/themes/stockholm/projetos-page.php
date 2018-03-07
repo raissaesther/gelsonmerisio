@@ -132,8 +132,6 @@ get_header();
 								<a class="box open-popup-link" href="#<?php echo $postid; ?>">
 									<figure>
 										<img src="<?php echo $image[0]; ?>" alt="">
-										<figcaption>
-										</figcaption>
 									</figure>
 									<h3><?php the_title(); ?></h3>
 								</a>
@@ -146,7 +144,6 @@ get_header();
 
 				</article>
 			</section>
-		</section>
 	</div>
 </div>
 </div>
