@@ -11,4 +11,24 @@ $j(document).ready(function() {
 
 	var mixer = mixitup('#prod-container');
 
+	$j(function () {
+
+		$j('.popup-modal').magnificPopup({
+			type: 'inline',
+			preloader: false,
+			focus: '#username',
+			modal: true,
+			gallery: {
+			    // options for gallery
+			    enabled: true
+			  }
+		});
+
+		$j(document).on('click', '.popup-modal-dismiss', function (e) {
+			e.preventDefault();
+			$j.magnificPopup.close();
+		});
+
+	});
+
 	});
