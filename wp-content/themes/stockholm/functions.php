@@ -71,7 +71,7 @@ if (!function_exists('qode_styles')) {
 
 		//include magnific
 		wp_enqueue_style("qode_font-awesome", QODE_ROOT . "/magnific/magnific-popup.css");
-		wp_enqueue_style("bootstrap_css", QODE_ROOT . "/css/bootstrap-3/css/bootstrap.min.css");
+		// wp_enqueue_style("bootstrap_css", QODE_ROOT . "/css/bootstrap-3/css/bootstrap.min.css");
 
 		//include elegant font styles
 		wp_enqueue_style("qode_elegant-icons", QODE_ROOT . "/css/elegant-icons/style.min.css");
@@ -386,7 +386,7 @@ if (!function_exists('qode_scripts')) {
 
 		//init theme core
 		wp_enqueue_script("jquery");
-		wp_enqueue_script("bootstrap_js", QODE_ROOT."/css/bootstrap-3/js/bootstrap.min.js",array(),false,true);
+		// wp_enqueue_script("bootstrap_js", QODE_ROOT."/css/bootstrap-3/js/bootstrap.min.js",array(),false,true);
 		wp_enqueue_script("wp-mediaelement");
 		wp_enqueue_script("mixitup", QODE_ROOT."/js/mixitup.min.js",array(),false,true);
 		wp_enqueue_script("qode_plugins", QODE_ROOT."/js/plugins.js",array(),false,true);
