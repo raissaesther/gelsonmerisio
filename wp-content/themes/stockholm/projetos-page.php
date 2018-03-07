@@ -122,7 +122,7 @@ get_header();
 								</a>
 
 
-																<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+																<!-- <div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
 																	<header style="text-align: center;text-transform: uppercase;">
 																		<h1><?php the_title(); ?></h1>
 																	</header>
@@ -134,7 +134,7 @@ get_header();
 																			<p><?php the_content(); ?></p>
 																		</article>
 																	</section>
-																</div>
+																</div> -->
 
 
 							</div>
