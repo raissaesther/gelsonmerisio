@@ -75,6 +75,7 @@ get_header();
 								</a>
 
 								<div id="<?php echo $postid; ?>" class="modal fade">
+									<div class="modal-dialog" role="document">
 									<header style="text-align: center;text-transform: uppercase;">
 										<h1><?php the_title(); ?></h1>
 									</header>
@@ -86,6 +87,7 @@ get_header();
 											<p><?php the_content(); ?></p>
 										</article>
 									</section>
+								</div>
 								</div>
 							</div>
 						<?php endwhile; // end of the loop. ?>
