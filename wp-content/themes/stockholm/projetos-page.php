@@ -113,14 +113,7 @@ get_header();
 							<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
 							<div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
-								<a class="box popup-modal" href="#<?php echo $postid; ?>">
-									<figure>
-										<img src="<?php echo $image[0]; ?>" alt="">
-										<figcaption>
-										</figcaption>
-									</figure>
-									<h3><?php the_title(); ?></h3>
-								</a>
+
 
 								<div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
 									<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
@@ -136,6 +129,16 @@ get_header();
 										</article>
 									</section>
 								</div>
+
+								<a class="box open-popup-link" href="#<?php echo $postid; ?>">
+									<figure>
+										<img src="<?php echo $image[0]; ?>" alt="">
+										<figcaption>
+										</figcaption>
+									</figure>
+									<h3><?php the_title(); ?></h3>
+								</a>
+
 							</div>
 						<?php endwhile; // end of the loop. ?>
 						<?php wp_reset_postdata();?>

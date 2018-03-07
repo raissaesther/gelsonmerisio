@@ -12,7 +12,7 @@ $j(document).ready(function() {
 	var mixer = mixitup('#prod-container');
 
 
-		$j('.popup-modal').magnificPopup({
+		$j('.open-popup-link').magnificPopup({
 			type: 'inline',
 			preloader: false,
 			focus: '#username',
