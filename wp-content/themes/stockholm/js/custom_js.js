@@ -5,7 +5,7 @@ $j(document).ready(function() {
 	"use strict";
 
 	// Instantiate MixItUp:
-	$j( '.pfilter a' ).click(function( event ) {
+	$j( '.filter a' ).click(function( event ) {
 	  event.preventDefault();
 	});
 
