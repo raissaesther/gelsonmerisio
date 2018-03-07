@@ -54,7 +54,7 @@ get_header();
 							'post_type' => 'post',
 							'order' => 'ASC',
 							'post_status' => 'publish',
-							'posts_per_page' => -1
+							'posts_per_page' => -1 	
 						);
 						$loop = new WP_Query( $post ); ?>
 
@@ -74,29 +74,9 @@ get_header();
 									<h3><?php the_title(); ?></h3>
 								</a>
 
-								<div class="modal fade" id="<?php echo $postid; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-								  <div class="modal-dialog" role="document">
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								        <h4 class="modal-title" id="myModalLabel"><?php the_title(); ?></h4>
-								      </div>
-								      <div class="modal-body">
-												<figure class="col-md-6" style="overflow:hidden">
-													<img style="width:100%" src="<?php echo $image[0]; ?>">
-												</figure>
-												<article class="col-md-6">
-													<p><?php the_content(); ?></p>
-												</article>
-								      </div>
-
-								    </div>
-								  </div>
-								</div>
-
-								<!-- <div id="<?php echo $postid; ?>" class="modal fade" tabindex="-1" role="dialog">
-									<button title="Close (Esc)" type="button">×</button>
-									<header>
+								<div id="<?php echo $postid; ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+									<button title="Close (Esc)" type="button" class="mfp-close popup-modal-dismiss" style="position: absolute;right: 0;top: 0;color: #32323d;">×</button>
+									<header style="text-align: center;text-transform: uppercase;">
 										<h1><?php the_title(); ?></h1>
 									</header>
 									<section style="overflow: hidden;">
@@ -107,7 +87,7 @@ get_header();
 											<p><?php the_content(); ?></p>
 										</article>
 									</section>
-								</div> -->
+								</div>
 							</div>
 						<?php endwhile; // end of the loop. ?>
 						<?php wp_reset_postdata();?>
