@@ -14,9 +14,6 @@ $j(document).ready(function() {
 
 		$j('.open-popup-link').magnificPopup({
 			type: 'inline',
-			preloader: false,
-			focus: '#username',
-			modal: true,
 			gallery: {
 			    // options for gallery
 			    enabled: true
