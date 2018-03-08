@@ -9,7 +9,14 @@ $j(document).ready(function() {
 	  event.preventDefault();
 	});
 
-	var mixer = mixitup('#prod-container');
+	var containerEl = document.querySelector('#prod-container');
+
+	var mixer = mixitup(containerEl, {
+	    animation: {
+	        effects: 'fade scale(0.5)'
+	    }
+	});
+
 
 
 		$j('.open-popup-link').magnificPopup({
