@@ -92,12 +92,12 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 			                                <h3><?php the_title(); ?></h3>
 			                              </header>
 			                              <section style="overflow: hidden;" class="wpb_column vc_column_container">
-			                                <figure class="vc_col-sm-6" style="overflow:hidden">
+			                                <div class="vc_col-sm-6" style="overflow:hidden">
 			                                  <img style="width:100%" src="<?php echo $image[0]; ?>">
-			                                </figure>
-			                                <article class="vc_col-sm-6">
+			                                </div>
+			                                <div class="vc_col-sm-6">
 			                                  <p><?php the_content(); ?></p>
-			                                </article>
+			                                </div>
 			                              </section>
 			                            </div>
 
