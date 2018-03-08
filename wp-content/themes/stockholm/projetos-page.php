@@ -42,9 +42,7 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 	<div class="full_width">
 		<div class="full_width_inner">
 
-			<?php
-			get_template_part('templates/blog/blog-structure', 'loop');
-			?>
+		<?php the_content(); ?>
 
 		</div>
 	</div>
