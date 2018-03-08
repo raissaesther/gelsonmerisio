@@ -9,42 +9,7 @@ global $wp_query;
 $id = $wp_query->get_queried_object_id();
 get_header();
 
-if(get_post_meta($id, "qode_page_background_color", true) != ""){
-	$background_color = get_post_meta($id, "qode_page_background_color", true);
-}else{
-	$background_color = "";
-}
-
-$content_style = "";
-if(get_post_meta($id, "qode_content-top-padding", true) != ""){
-	if(get_post_meta($id, "qode_content-top-padding-mobile", true) == "yes"){
-		$content_style = "style='padding-top:".get_post_meta($id, "qode_content-top-padding", true)."px !important'";
-	}else{
-		$content_style = "style='padding-top:".get_post_meta($id, "qode_content-top-padding", true)."px'";
-	}
-}
-
 ?>
-
-<?php while ( have_posts() ) : the_post(); ?>
-	<?php if(get_post_meta($id, "qode_page_scroll_amount_for_sticky", true)) { ?>
-		<script>
-		var page_scroll_amount_for_sticky = <?php echo get_post_meta($id, "qode_page_scroll_amount_for_sticky", true); ?>;
-		</script>
-	<?php } ?>
-
-	<?php get_template_part( 'title' ); ?>
-
-
-
-
-	<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
-
-		<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
-			<?php the_content(); ?>
-
-		<?php endwhile; // end of the loop. ?>
-
 		<div class="projeto-e-ideias">
 			<!-- Products list -->
 			<section class="wpb_column vc_column_container vc_col-sm-12">
@@ -162,14 +127,5 @@ if(get_post_meta($id, "qode_content-top-padding", true) != ""){
 				</article>
 			</section>
 		</div>
-
-	</div>
-</div>
-
-
-
-<script type="text/javascript">
-
-</script>
 
 <?php get_footer(); ?>
