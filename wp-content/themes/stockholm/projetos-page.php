@@ -42,9 +42,9 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 	<div class="full_width">
 		<div class="full_width_inner">
 
-			<div class="projeto-e-ideias">
+			<div class="projeto-e-ideias section_inner clearfix">
 			  <!-- Products list -->
-			  <section class="section_inner clearfix">
+			  <section class="wpb_column vc_column_container vc_col-sm-12">
 
 			    <nav class="products-nav">
 			      <ul style="list-style: none;">
