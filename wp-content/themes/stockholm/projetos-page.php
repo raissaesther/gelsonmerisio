@@ -3,14 +3,16 @@
 Template Name: Projetos e Ideias Page
 */
 ?>
+
+<?php get_header(); ?>
 <?php
 global $wp_query;
 $id = $wp_query->get_queried_object_id();
-$sidebar = get_post_meta($id, "qode_show-sidebar", true);
-
-$enable_page_comments = false;
-if(get_post_meta($id, "qode_enable-page-comments", true) == 'yes') {
-	$enable_page_comments = true;
+if(get_post_meta($id, "qode_show-sidebar", true) == ''){
+		$sidebar = $qode_options['category_blog_sidebar'];
+}
+else{
+	$sidebar = get_post_meta($id, "qode_show-sidebar", true);
 }
 
 if(get_post_meta($id, "qode_page_background_color", true) != ""){
@@ -19,140 +21,147 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 	$background_color = "";
 }
 
-$content_style = "";
-if(get_post_meta($id, "qode_content-top-padding", true) != ""){
-	if(get_post_meta($id, "qode_content-top-padding-mobile", true) == "yes"){
-		$content_style = "style='padding-top:".get_post_meta($id, "qode_content-top-padding", true)."px !important'";
-	}else{
-		$content_style = "style='padding-top:".get_post_meta($id, "qode_content-top-padding", true)."px'";
-	}
-}
-
-if ( get_query_var('paged') ) { $paged = get_query_var('paged'); }
-elseif ( get_query_var('page') ) { $paged = get_query_var('page'); }
-else { $paged = 1; }
-
 ?>
-	<?php get_header(); ?>
-		<?php if(get_post_meta($id, "qode_page_scroll_amount_for_sticky", true)) { ?>
-			<script>
-			var page_scroll_amount_for_sticky = <?php echo get_post_meta($id, "qode_page_scroll_amount_for_sticky", true); ?>;
-			</script>
-		<?php } ?>
-			<?php get_template_part( 'title' ); ?>
-		<?php
-		$revslider = get_post_meta($id, "qode_revolution-slider", true);
-		if (!empty($revslider)){ ?>
-			<div class="q_slider"><div class="q_slider_inner">
-			<?php echo do_shortcode($revslider); ?>
-			</div></div>
-		<?php
-		}
-		?>
-	<div class="full_width"<?php if($background_color != "") { echo " style='background-color:". $background_color ."'";} ?>>
-	<div class="full_width_inner" <?php if($content_style != "") { echo wp_kses($content_style, array('style')); } ?>>
-		<?php if(($sidebar == "default")||($sidebar == "")) : ?>
-			<?php if (have_posts()) :
-					while (have_posts()) : the_post(); ?>
-					<?php the_content(); ?>
-					<?php
- $args_pages = array(
-  'before'           => '<p class="single_links_pages">',
-  'after'            => '</p>',
-  'pagelink'         => '<span>%</span>'
- );
 
- wp_link_pages($args_pages); ?>
+	<?php if(get_post_meta($id, "qode_page_scroll_amount_for_sticky", true)) { ?>
+		<script>
+		var page_scroll_amount_for_sticky = <?php echo get_post_meta($id, "qode_page_scroll_amount_for_sticky", true); ?>;
+		</script>
+	<?php } ?>
+		<?php get_template_part( 'title' ); ?>
+	<?php
+	$revslider = get_post_meta($id, "qode_revolution-slider", true);
+	if (!empty($revslider)){ ?>
+		<div class="q_slider"><div class="q_slider_inner">
+		<?php echo do_shortcode($revslider); ?>
+		</div></div>
+	<?php
+	}
+	?>
 
-					<?php endwhile; ?>
-				<?php endif; ?>
-		<?php elseif($sidebar == "1" || $sidebar == "2"): ?>
+	<div class="full_width">
+		<div class="full_width_inner">
 
-			<?php if($sidebar == "1") : ?>
-				<div class="two_columns_66_33 clearfix grid2">
-					<div class="column1">
-			<?php elseif($sidebar == "2") : ?>
-				<div class="two_columns_75_25 clearfix grid2">
-					<div class="column1">
-			<?php endif; ?>
-					<?php if (have_posts()) :
-						while (have_posts()) : the_post(); ?>
-						<div class="column_inner">
+			<div class="projeto-e-ideias">
+			  <!-- Products list -->
+			  <section class="wpb_column vc_column_container vc_col-sm-12">
 
-						<?php the_content(); ?>
-						<?php
- $args_pages = array(
-  'before'           => '<p class="single_links_pages">',
-  'after'            => '</p>',
-  'pagelink'         => '<span>%</span>'
- );
+			    <nav class="products-nav">
+			      <ul style="list-style: none;">
+			        <li class="filter" data-filter=".todos">
+			          <a class="temas" href="#">
+			            <span class="icon">
+			              <img class="alignnone size-medium wp-image-227"
+			              src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150">
+			            </span>
+			            <h3>TODOS</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".educacao">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
+			            <h3>EDUCAÇÃO</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".meio-ambiente">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
+			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/meio-ambiente.png" alt="" width="150" height="150"></span>
+			            <h3>MEIO AMBIENTE</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".saude">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
+			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/saude.png" alt="" width="150" height="150"></span>
+			            <h3>SAÚDE</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".seguranca">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
+			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/seguranca.png" alt="" width="150" height="150"></span>
+			            <h3>SEGURANÇA</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".social">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
+			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/social.png" alt="" width="150" height="150"></span>
+			            <h3>SOCIAL</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".gestao-inovacao">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
+			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/inovacao.png" alt="" width="150" height="150"></span>
+			            <h3>GESTÃO E INOVAÇÃO</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".transparencia">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
+			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/transparencia.png" alt="" width="150" height="150"></span>
+			            <h3>TRANSPARÊNCIA</h3>
+			          </a>
+			        </li>
+			        <li class="filter" data-filter=".agronegocio">
+			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
+			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/gestao-eficiente.png" alt="" width="150" height="150"></span>
+			            <h3>AGRONEGÓCIO</h3>
+			          </a>
+			        </li>
+			      </ul>
+			    </nav>
 
- wp_link_pages($args_pages); ?>
-							<?php
-							if($enable_page_comments){
-							?>
-							<div class="container">
-								<div class="container_inner">
-							<?php
-								comments_template('', true);
-							?>
-								</div>
-							</div>
-							<?php
-							}
-							?>
-						</div>
-				<?php endwhile; ?>
-				<?php endif; ?>
+			    <article class="products-list">
+			      <div id="prod-container">
+			        <?php
+			        $post = array(
+			          'post_type' => 'post',
+			          'order' => 'ASC',
+			          'post_status' => 'publish',
+			          'posts_per_page' => -1
+			        );
+			        $loop = new WP_Query( $post ); ?>
 
+			        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-					</div>
-					<div class="column2"><?php get_sidebar();?></div>
-				</div>
-			<?php elseif($sidebar == "3" || $sidebar == "4"): ?>
-				<?php if($sidebar == "3") : ?>
-					<div class="two_columns_33_66 clearfix grid2">
-						<div class="column1"><?php get_sidebar();?></div>
-						<div class="column2">
-				<?php elseif($sidebar == "4") : ?>
-					<div class="two_columns_25_75 clearfix grid2">
-						<div class="column1"><?php get_sidebar();?></div>
-						<div class="column2">
-				<?php endif; ?>
-						<?php if (have_posts()) :
-							while (have_posts()) : the_post(); ?>
-							<div class="column_inner">
-							<?php the_content(); ?>
-							<?php
- $args_pages = array(
-  'before'           => '<p class="single_links_pages">',
-  'after'            => '</p>',
-  'pagelink'         => '<span>%</span>'
- );
+			          <?php $postid = get_the_ID(); ?>
+			          <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+			          <?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
- wp_link_pages($args_pages); ?>
-							<?php
-							if($enable_page_comments){
-							?>
-							<div class="container">
-								<div class="container_inner">
-							<?php
-								comments_template('', true);
-							?>
-								</div>
-							</div>
-							<?php
-							}
-							?>
-							</div>
-					<?php endwhile; ?>
-					<?php endif; ?>
+			          <div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
 
 
-						</div>
+			            <a class="box open-popup-link" href="#<?php echo $postid; ?>">
+			              <figure>
+			                <img src="<?php echo $image[0]; ?>" alt="">
+			              </figure>
+			              <h3><?php the_title(); ?></h3>
+			            </a>
 
-					</div>
-			<?php endif; ?>
+
+			                            <!-- <div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+			                              <header style="text-align: center;text-transform: uppercase;">
+			                                <h1><?php the_title(); ?></h1>
+			                              </header>
+			                              <section style="overflow: hidden;">
+			                                <figure class="vc_col-md-6" style="overflow:hidden">
+			                                  <img style="width:100%" src="<?php echo $image[0]; ?>">
+			                                </figure>
+			                                <article class="vc_col-md-6">
+			                                  <p><?php the_content(); ?></p>
+			                                </article>
+			                              </section>
+			                            </div> -->
+
+
+			          </div>
+
+			        <?php endwhile; // end of the loop. ?>
+			        <?php wp_reset_postdata();?>
+			      </div>
+
+			    </article>
+			  </section>
+			</div>
+
+		</div>
 	</div>
-	</div>
-	<?php get_footer(); ?>
+
+
+<?php get_footer(); ?>
