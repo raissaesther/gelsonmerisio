@@ -88,17 +88,17 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 
 
 			                            <div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
-																		<header style="text-align: center;text-transform: uppercase;">
-																		  <h3><?php the_title(); ?></h3>
-																		</header>
-																		<section style="overflow: hidden;">
-																		  <figure class="vc_col-md-6" style="overflow:hidden">
-																		    <img style="width:100%" src="<?php echo $image[0]; ?>">
-																		  </figure>
-																		  <article class="vc_col-md-6">
-																		    <p><?php the_content(); ?></p>
-																		  </article>
-																		</section>
+			                              <header style="text-align: center;text-transform: uppercase;">
+			                                <h1><?php the_title(); ?></h1>
+			                              </header>
+			                              <section style="overflow: hidden;"c lass="wpb_column vc_column_container">
+			                                <figure class="vc_col-sm-6" style="overflow:hidden">
+			                                  <img style="width:100%" src="<?php echo $image[0]; ?>">
+			                                </figure>
+			                                <article class="vc_col-sm-6">
+			                                  <p><?php the_content(); ?></p>
+			                                </article>
+			                              </section>
 			                            </div>
 
 
