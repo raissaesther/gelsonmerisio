@@ -31,7 +31,7 @@ get_header();
 
 		<div class="projeto-e-ideias">
 			<!-- Products list -->
-			<section class="container">
+			<section class="wpb_column vc_column_container vc_col-sm-12">
 
 				<nav class="products-nav">
 					<ul style="list-style: none;">
