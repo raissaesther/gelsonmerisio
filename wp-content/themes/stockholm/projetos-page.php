@@ -8,6 +8,22 @@ Template Name: Projetos e Ideias Page
 global $wp_query;
 $id = $wp_query->get_queried_object_id();
 get_header();
+
+if(get_post_meta($id, "qode_page_background_color", true) != ""){
+	$background_color = get_post_meta($id, "qode_page_background_color", true);
+}else{
+	$background_color = "";
+}
+
+$content_style = "";
+if(get_post_meta($id, "qode_content-top-padding", true) != ""){
+	if(get_post_meta($id, "qode_content-top-padding-mobile", true) == "yes"){
+		$content_style = "style='padding-top:".get_post_meta($id, "qode_content-top-padding", true)."px !important'";
+	}else{
+		$content_style = "style='padding-top:".get_post_meta($id, "qode_content-top-padding", true)."px'";
+	}
+}
+
 ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
