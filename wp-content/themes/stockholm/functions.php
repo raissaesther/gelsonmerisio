@@ -70,7 +70,7 @@ if (!function_exists('qode_styles')) {
 		wp_enqueue_style("qode_font-awesome", QODE_ROOT . "/css/font-awesome/css/font-awesome.min.css");
 
 		//include magnific
-		wp_enqueue_style("qode_font-awesome", QODE_ROOT . "/magnific/magnific-popup.css");
+		wp_enqueue_style("qode_magnific", QODE_ROOT . "/magnific/magnific-popup.css");
 
 		//include elegant font styles
 		wp_enqueue_style("qode_elegant-icons", QODE_ROOT . "/css/elegant-icons/style.min.css");
