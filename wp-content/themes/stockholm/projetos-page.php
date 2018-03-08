@@ -45,65 +45,17 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 			<div class="projeto-e-ideias section_inner clearfix">
 			  <!-- Products list -->
 			  <section class="wpb_column vc_column_container vc_col-sm-12">
-
 			    <nav class="products-nav">
 			      <ul style="list-style: none;">
-			        <li class="filter" data-filter=".todos">
-			          <a class="temas" href="#">
-			            <span class="icon">
-			              <img class="alignnone size-medium wp-image-227"
-			              src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150">
-			            </span>
-			            <h3>TODOS</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".educacao">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span>
-			            <h3>EDUCAÇÃO</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".meio-ambiente">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
-			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/meio-ambiente.png" alt="" width="150" height="150"></span>
-			            <h3>MEIO AMBIENTE</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".saude">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
-			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/saude.png" alt="" width="150" height="150"></span>
-			            <h3>SAÚDE</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".seguranca">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
-			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/seguranca.png" alt="" width="150" height="150"></span>
-			            <h3>SEGURANÇA</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".social">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
-			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/social.png" alt="" width="150" height="150"></span>
-			            <h3>SOCIAL</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".gestao-inovacao">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
-			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/inovacao.png" alt="" width="150" height="150"></span>
-			            <h3>GESTÃO E INOVAÇÃO</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".transparencia">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
-			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/transparencia.png" alt="" width="150" height="150"></span>
-			            <h3>TRANSPARÊNCIA</h3>
-			          </a>
-			        </li>
-			        <li class="filter" data-filter=".agronegocio">
-			          <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227"
-			            src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/gestao-eficiente.png" alt="" width="150" height="150"></span>
-			            <h3>AGRONEGÓCIO</h3>
-			          </a>
-			        </li>
+			        <li class="filter" data-filter=".todos"> <a class="temas" href="#"> <span class="icon"> <img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"> </span> <h3>TODOS</h3> </a> </li>
+			        <li class="filter" data-filter=".educacao"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span> <h3>EDUCAÇÃO</h3> </a> </li>
+			        <li class="filter" data-filter=".meio-ambiente"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/meio-ambiente.png" alt="" width="150" height="150"></span> <h3>MEIO AMBIENTE</h3> </a> </li>
+			        <li class="filter" data-filter=".saude"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/saude.png" alt="" width="150" height="150"></span> <h3>SAÚDE</h3> </a> </li>
+			        <li class="filter" data-filter=".seguranca"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/seguranca.png" alt="" width="150" height="150"></span> <h3>SEGURANÇA</h3> </a> </li>
+			        <li class="filter" data-filter=".social"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/social.png" alt="" width="150" height="150"></span> <h3>SOCIAL</h3> </a> </li>
+			        <li class="filter" data-filter=".gestao-inovacao"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/inovacao.png" alt="" width="150" height="150"></span> <h3>GESTÃO E INOVAÇÃO</h3> </a> </li>
+			        <li class="filter" data-filter=".transparencia"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/transparencia.png" alt="" width="150" height="150"></span> <h3>TRANSPARÊNCIA</h3> </a> </li>
+			        <li class="filter" data-filter=".agronegocio"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/gestao-eficiente.png" alt="" width="150" height="150"></span> <h3>AGRONEGÓCIO</h3> </a> </li>
 			      </ul>
 			    </nav>
 
@@ -135,19 +87,9 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 			            </a>
 
 
-			                            <!-- <div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
-			                              <header style="text-align: center;text-transform: uppercase;">
-			                                <h1><?php the_title(); ?></h1>
-			                              </header>
-			                              <section style="overflow: hidden;">
-			                                <figure class="vc_col-md-6" style="overflow:hidden">
-			                                  <img style="width:100%" src="<?php echo $image[0]; ?>">
-			                                </figure>
-			                                <article class="vc_col-md-6">
-			                                  <p><?php the_content(); ?></p>
-			                                </article>
-			                              </section>
-			                            </div> -->
+			                            <div id="<?php echo $postid; ?>" class="mfp-hide" style="background-color: #fff;max-width: 600px;margin: 0 auto;padding: 20px;position:relative">
+			                    
+			                            </div>
 
 
 			          </div>
