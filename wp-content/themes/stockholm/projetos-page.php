@@ -47,7 +47,7 @@ if(get_post_meta($id, "qode_page_background_color", true) != ""){
 			  <section class="wpb_column vc_column_container vc_col-sm-12">
 			    <nav class="products-nav">
 			      <ul style="list-style: none;">
-			        <li class="filter" data-filter=".todos"> <a class="temas" href="#"> <span class="icon"> <img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"> </span> <h3>TODOS</h3> </a> </li>
+			        <li class="filter" data-filter=".todos"> <a class="temas" href="#"> <span class="icon"> <img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/03/todos.png" alt="" width="150" height="150"> </span> <h3>TODOS</h3> </a> </li>
 			        <li class="filter" data-filter=".educacao"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span> <h3>EDUCAÇÃO</h3> </a> </li>
 			        <li class="filter" data-filter=".meio-ambiente"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/meio-ambiente.png" alt="" width="150" height="150"></span> <h3>MEIO AMBIENTE</h3> </a> </li>
 			        <li class="filter" data-filter=".saude"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/saude.png" alt="" width="150" height="150"></span> <h3>SAÚDE</h3> </a> </li>
