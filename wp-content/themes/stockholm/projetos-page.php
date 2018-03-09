@@ -92,7 +92,7 @@ if (!empty($revslider)){ ?>
 									</header>
 									<section style="overflow: hidden;" class="wpb_column vc_column_container">
 										<div class="vc_col-sm-6" style="overflow:hidden">
-											<img tyle="width: 50%;float: left;margin: 0 20px 0 0;" src="<?php echo $image[0]; ?>">
+											<img style="width: 50%;float: left;margin: 0 20px 0 0;" src="<?php echo $image[0]; ?>">
 										</div>
 										<div class="vc_col-sm-6">
 											<p><?php the_content(); ?></p>
