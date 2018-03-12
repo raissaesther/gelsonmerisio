@@ -32,7 +32,10 @@ var mixer;
 
 if (containerEl) {
 	mixer = mixitup(containerEl, {
-
+		animation: {
+			enable: true,
+			easing: 'ease-in-out'
+		}
 
 	});
 }
