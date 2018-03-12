@@ -43,7 +43,7 @@ global $wp_query;
 </head>
 
 <body <?php body_class(); ?>>
-	
+
 	<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -789,7 +789,7 @@ if(isset($qode_options['paspartu'])  && $qode_options['paspartu'] == 'yes') { ?>
 	<?php } ?>
 
 	<ul class="float-si">
-		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-		<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="https://www.facebook.com/gelsonmerisio" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="http://instagram.com/gelsonmerisio" target="_blank"><i class="fa fa-instagram"></i></a></li>
+		<li><a href="http://twitter.com/merisio" target="_blank"><i class="fa fa-twitter"></i></a></li>
 	</ul>
