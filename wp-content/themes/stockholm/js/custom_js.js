@@ -19,7 +19,7 @@ var containerEl = document.querySelector('#prod-container');
 			 animation: {
 			enable: true,
 			easing: 'ease-in-out'
-	},
+	}
 
 		 });
  }
