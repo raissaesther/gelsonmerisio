@@ -16,9 +16,7 @@ var containerEl = document.querySelector('#prod-container');
 
  if (containerEl) {
 		 mixer = mixitup(containerEl, {
-					selectors: {
-							control: '[data-mixitup-control]'
-					}
+				
 		 });
  }
 
