@@ -16,10 +16,7 @@ var containerEl = document.querySelector('#prod-container');
 
  if (containerEl) {
 		 mixer = mixitup(containerEl, {
-			 animation: {
-			enable: true,
-			easing: 'ease-in-out'
-	}
+
 
 		 });
  }
