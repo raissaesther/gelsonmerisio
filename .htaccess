@@ -9,3 +9,5 @@ RewriteRule . /web/gelsonmerisio/site/index.php [L]
 </IfModule>
 
 # END WordPress
+AuthName "Proted"
+AuthUserFile "/home/montr035/.htpasswds/public_html/web/gelsonmerisio/site/passwd"
