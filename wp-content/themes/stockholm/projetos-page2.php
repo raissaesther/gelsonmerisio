@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Projetos e Ideias Page
+Template Name: Projetos e Ideias Page2
 */
 ?>
 
@@ -45,7 +45,7 @@ if (!empty($revslider)){ ?>
 		<div class="projeto-e-ideias container_inner clearfix">
 			<!-- Products list -->
 			<section class="wpb_column vc_column_container vc_col-sm-12">
-				<nav class="products-nav vc_col-sm-3">
+				<nav class="products-nav">
 					<ul style="list-style: none;">
 						<li class="filter" data-filter=".todos"> <a class="temas" href="#"> <span class="icon"> <img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/03/todos.png" alt="" width="150" height="150"> </span> <h3>TODOS</h3> </a> </li>
 						<li class="filter" data-filter=".educacao"> <a class="temas" href="#"><span class="icon"><img class="alignnone size-medium wp-image-227" src="http://montre.com.br/web/gelsonmerisio/site/wp-content/uploads/2018/01/educacao.png" alt="" width="150" height="150"></span> <h3>EDUCAÇÃO</h3> </a> </li>
@@ -60,7 +60,7 @@ if (!empty($revslider)){ ?>
 				</nav>
 
 				<article class="products-list">
-					<div id="prod-container" class="vc_col-sm-9">
+					<div id="prod-container">
 						<?php
 						$post = array(
 							'post_type' => 'post',
@@ -76,7 +76,7 @@ if (!empty($revslider)){ ?>
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 							<?php $terms = get_the_terms( $post->ID, 'category' ); ?>
 
-							<div class="vc_col-sm-4 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
+							<div class="vc_col-sm-3 mix <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
 
 
 								<a class="box open-popup-link" href="#<?php echo $postid; ?>">
