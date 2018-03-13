@@ -21,16 +21,16 @@
 // ** Configurações do MySQL - Você pode pegar estas informações
 // com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define( 'DB_NAME', 'montr035_dbgm' );
+define( 'DB_NAME', 'gm_2018' );
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'montr035_gmuser' );
+define( 'DB_USER', 'gm_2018' );
 
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', '*zB8a!{pDgBz' );
+define( 'DB_PASSWORD', 'Gm@2k18' );
 
 /** Nome do host do MySQL */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'gm_2018.mysql.dbaas.com.br' );
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
 define( 'DB_CHARSET', 'utf8' );
