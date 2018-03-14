@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Flickr Album Gallery
- * Version: 1.6.8
+ * Version: 1.6.9
  * Description: Display your Flickr photo albums on WordPress
  * Author: Weblizar
  * Author URI: https://weblizar.com/plugins/flickr-album-gallery-pro/

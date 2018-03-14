@@ -192,6 +192,9 @@ The `SLIDE STYLE` settings are the style settings for each individual slide with
 * Added a new feature to allow you to set slider minimum height in pixels
 * Added a new feature so that each slide within a slider has its own unique CSS ID
 
+= 2.1.3 =
+* Minor bug fix with Slide Anything PRO Software Licensing integration
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -299,3 +302,6 @@ The `SLIDE STYLE` settings are the style settings for each individual slide with
 = 2.1.2 =
 * Added a new feature to allow you to set slider minimum height in pixels
 * Added a new feature so that each slide within a slider has its own unique CSS ID
+
+= 2.1.3 =
+* Minor bug fix with Slide Anything PRO Software Licensing integration

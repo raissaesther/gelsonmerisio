@@ -156,8 +156,8 @@ function showContactMap() {
 }
 
 var no_ajax_pages = [];
-var qode_root = 'http://montre.com.br/web/gelsonmerisio/site/';
-var theme_root = 'http://montre.com.br/web/gelsonmerisio/site/wp-content/themes/stockholm';
+var qode_root = 'http://gelsonmerisio.com.br/2018/';
+var theme_root = 'http://gelsonmerisio.com.br/2018/wp-content/themes/stockholm';
 var header_style_admin = "";
 if(typeof no_ajax_obj !== 'undefined') {
 	no_ajax_pages = no_ajax_obj.no_ajax_pages;

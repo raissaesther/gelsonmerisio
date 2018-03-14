@@ -1,11 +1,11 @@
-=== Flickr Album Gallery – Image, Gallery, Photo, Albums ===
+=== Flickr Album Gallery With Shortcode And Widget ===
 Contributors: weblizar
 Donate link: https://weblizar.com/plugins/flickr-album-gallery-pro/
 Contributors: weblizar
 Tags: flickr gallery, flickr album gallery, flickr shortcode, flickr widget, flicrk wordpress plugin
 Requires at least: 3.8
-Tested up to: 4.9.1
-Stable tag: 1.6.8
+Tested up to: 4.9.4
+Stable tag: 1.6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,7 @@ Please use WordPress [support forum](http://wordpress.org/support/plugin/flickr-
 
 For more information, see [Weblizar](http://wwww.weblizar.com/)
 
+= 1.6.9 - readme update
 = 1.6.8 - version update 
 = 1.6.7 - version update + compatible with latest WordPress 4.9.1
 = 1.6.6 - version update + compatible with latest WordPress 4.9
