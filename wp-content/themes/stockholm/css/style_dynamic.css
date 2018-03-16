@@ -437,7 +437,13 @@ header:not(.with_hover_bg_color) nav.main_menu > ul > li:hover > a,
 
 
 
-
+	nav.mobile_menu ul li a,
+	nav.mobile_menu ul li h4{
+		 color: #dc6627; 															}
+			nav.mobile_menu ul > li.has_sub > span.mobile_arrow{
+			 color: #dc6627;
+		}
+	
 
 
 
